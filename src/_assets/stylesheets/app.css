@@ -4,11 +4,42 @@
 @tailwind components;
 
 #canvas_background {
-	background: #000;
 	z-index: -1;
 }
 
+.nav {
+	z-index: 1000001;
+    user-select: none;
+}
 
+.nav-left {
+	left: 40px
+}
+
+.nav-right{
+	right: 40px
+}
+.nav-transform {
+	z-index: 1000001;
+    transform: rotateZ(-90deg) translateX(-50%);
+    transform-origin: 0 50%;
+	top: 50%;
+}
+
+.nav-transform-right {
+	transform: rotateZ(-90deg) translateX(50%);
+    -webkit-transform-origin: 100% 50%;
+    -ms-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    top: 50%;
+}
+
+/* .nav-about-wrapper,  */
+/* .nav-works-wrapper { */
+.nav-mail-wrapper {
+    display: inline-block;
+    padding: 10px;
+}
 .absolute-center-x-y {
 	transform: translate(-50%, -50%);
 	top: 50%;
