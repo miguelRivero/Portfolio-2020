@@ -4,6 +4,7 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollToPlugin);
 
 window.onload = function () {
+
 	// BACKGROUND ANIMATION //
 	var canvas = document.getElementById("canvas_background");
 	var ctx = canvas.getContext("2d");
@@ -205,46 +206,76 @@ window.onload = function () {
         
 
 	// SCROLL SNAP
-	const sections = [mainTitleEl, showcaseEl];
-	// const sections = [...document.querySelectorAll(".scroll-block")];
+// 	const sections = [mainTitleEl, showcaseEl];
+// 	// const sections = [...document.querySelectorAll(".scroll-block")];
 
-	let options = {
-		rootMargin: "0px",
-		threshold: .25,
-	},
-	_duration = .75;
+// 	let options = {
+// 		rootMargin: "0px",
+// 		threshold: .25,
+// 	},
+// 	_duration = .75;
 
-	const callback = (entries, observer) => {
-		entries.forEach((entry) => {
-			const { target } = entry;
-			console.log(entry.intersectionRatio)
-			if (target.id === 'main-title' && entry.intersectionRatio >= options.threshold) {
-				console.log("1")
-				console.log(target.id)
-				gsap.fromTo("#topname", {opacity: 1}, {opacity: 0, ease: _ease_rough, duration: _duration});
-				gsap.fromTo("#main-title", {opacity: 0}, {opacity: 1, ease: _ease, duration: _duration});
-				gsap.fromTo("#arrowdown", {opacity: 0}, {opacity: 1, ease: _ease, duration: _duration});
-				// } else {
-					// }
-					// target.classList.add("opacity-100");
-				} else {
-					console.log("2")
-					console.log(target.id)
-				// if (target.id === 'showcase') {
-					gsap.fromTo("#topname", {opacity: 0}, {opacity: 1, ease: _ease_rough, duration: _duration});
-					gsap.fromTo("#main-title", {opacity: 1}, {opacity: 0, ease: _ease, duration: _duration});
-					gsap.fromTo("#arrowdown", {opacity: 1}, {opacity: 0, ease: _ease, duration: _duration});
-				// target.classList.remove("opacity-100");
-			}
-		});
-	};
+// 	const callback = (entries, observer) => {
+// 		entries.forEach((entry) => {
+// 			const { target } = entry;
+// 			console.log(entry.intersectionRatio)
+// 			if (target.id === 'main-title' && entry.intersectionRatio >= options.threshold) {
+// 				console.log("1")
+// 				console.log(target.id)
+// 				gsap.fromTo("#topname", {opacity: 1}, {opacity: 0, ease: _ease_rough, duration: _duration});
+// 				gsap.fromTo("#main-title", {opacity: 0}, {opacity: 1, ease: _ease, duration: _duration});
+// 				gsap.fromTo("#arrowdown", {opacity: 0}, {opacity: 1, ease: _ease, duration: _duration});
+// 				// } else {
+// 					// }
+// 					// target.classList.add("opacity-100");
+// 				} else {
+// 					console.log("2")
+// 					console.log(target.id)
+// 				// if (target.id === 'showcase') {
+// 					gsap.fromTo("#topname", {opacity: 0}, {opacity: 1, ease: _ease_rough, duration: _duration});
+// 					gsap.fromTo("#main-title", {opacity: 1}, {opacity: 0, ease: _ease, duration: _duration});
+// 					gsap.fromTo("#arrowdown", {opacity: 1}, {opacity: 0, ease: _ease, duration: _duration});
+// 				// target.classList.remove("opacity-100");
+// 			}
+// 		});
+// 	};
 
-	const observer = new IntersectionObserver(callback, options);
+// 	const observer = new IntersectionObserver(callback, options);
 
-	// sections.forEach((section, index) => {
-		observer.observe(sections[0]);
-	// });
+// 	// sections.forEach((section, index) => {
+// 		observer.observe(sections[0]);
+// 	// });
 
-	// END SCROLL SNAP
+// 	// END SCROLL SNAP
+	const _duration = 1;
+	const ease_1 = 'elastic'
+	// the animation to use
+	const tl = gsap.timeline({paused: true});
+	// tl.from("#topname", {opacity: 1});
+	tl.staggerFromTo('#main-title', 1, {autoAlpha:1}, {top: -10, autoAlpha:0, ease: ease_1})
+		.staggerFromTo('#topname', 1, {top:-10, autoAlpha: 0}, {top:40, autoAlpha: 1,  ease: ease_1});
+	// The start and end positions in terms of the page scroll
+	const startY = innerHeight / 10;
+	const finishDistance = innerHeight / 5;
+	let requestId = null
+	// Listen to the scroll event
+	window.addEventListener('scroll', function(e) {
+		// Prevent the update from happening too often (throttle the scroll event)
+		if (!requestId) {
+			requestId = requestAnimationFrame(update);
+		}
+	});
+
+	update();
+
+	function update() {
+		// console.log('ipdate')
+		// console.log(scrollY)
+		// Update our animation
+		tl.progress((scrollY - startY) / finishDistance);
+		
+		// Let the scroll event fire again
+		requestId = null;
+	}
 
 };

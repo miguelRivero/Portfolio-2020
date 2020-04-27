@@ -627,6 +627,7 @@ video {
 
 body {
   font-family: Source Sans Pro, sans-serif;
+  background-color: #191919;
 }
 
 html {
@@ -656,10 +657,11 @@ html {
   line-height: 23px;
 }
 
-/* #main-title {
-	opacity: 0;
+#main-title {
+  height: 100vh;
 }
 
+/* 
 #main-title.is-visible {
 	opacity: 1;
 }
@@ -783,8 +785,8 @@ a {
 /* All the snapping stuff */
 
 #scroll-container {
-  height: 100vh;
-  overflow-y: scroll;
+  /* height: 100vh; */
+  /* overflow-y: scroll; */
   /* scroll-snap-type: y mandatory; */
   position: relative;
 }

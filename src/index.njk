@@ -3,13 +3,13 @@ layout: base.njk
 title: Miguel Rivero Portfolio 2020 Edition
 ---
 
-<main id="top">
+<main id="top" class="relative z-20">
     <div class="loader"></div>
 
     {# SMALL PAGE TITLE #}
-    <div class="small-main-title duration-200 font-display-sc text-xs md:text-xl overflow-topname  hover:text-mr-gold">
-        <a href="#main-title" data-scroll class="no-underline text-mr-white font-display-sc">
-            <div id="topname" class="opacity-0"> Miguel Rivero </div>
+    <div id="topname" class="fixed top-0 small-main-title duration-200 font-display-sc text-xs md:text-xl overflow-topname hover:text-mr-gold">
+        <a href="#main-title" data-scroll class="no-underline text-mr-white">
+            Miguel Rivero
         </a>
     </div>
     {# END SMALL PAGE TITLE #}  
@@ -17,7 +17,7 @@ title: Miguel Rivero Portfolio 2020 Edition
     <div id="scroll-container" class="container mx-auto px-16 py-24">
 
         {# PAGE TITLE #}
-        <section id="main-title" class="scroll-block duration-200">
+        <section id="main-title" class="scroll-block duration-200 relative">
             <div class="text-mr-white absolute-center-x-y">
                 <h1 class="font-display-sc sm:text-5xl text-3xl font-medium whitespace-no-wrap">
                     Miguel Rivero
@@ -114,36 +114,31 @@ title: Miguel Rivero Portfolio 2020 Edition
     {# END ARROW DOWN #}
 
     {# 1 0 BACKGROUND #}
-    <section class="wrapper">
-        <canvas id="canvas_background" class="absolute top-0 left-0 bg-jet-black"></canvas>
-    </section>
+    <canvas id="canvas_background" class="fixed top-0 left-0 bg-jet-black"></canvas>
     {# END BACKGROUND #}
-
-    {# NAV #}
-    <nav class="nav text-mr-white text-xs md:text-base">
-        <div class="nav-left nav-transform absolute">
-            <div class="nav-about-wrapper">
-                <h3 class="nav-about cursor-pointer hover:text-mr-gold duration-200">
-                    About
-                </h3>
-            </div>
-        </div>
-        <div class="nav-mail-wrapper nav-transform-right nav-right absolute">
-            <h3 class="nav-mail">
-                <a class="no-underline text-mr-white hover:text-mr-gold duration-200" href="mailto:miguelriveroloop@gmail.com?subject=Hello Miguel, I liked your website!">
-                    miguelriveroloop@gmail.com
-                </a>
-            </h3>
-        </div>
-    </nav>
-    {# END NAV #}
 
     <div class="grab"></div>
     <div class="about"></div>
     <div id="orientationside"></div>
     <div id="orientation-fallback"></div>
-
-
-
-
+<nav class="nav text-mr-white text-xs md:text-base fixed top-0 w-full h-full z-0">
+    <div class="nav-left nav-transform absolute">
+        <div class="nav-about-wrapper">
+            <h3 class="nav-about cursor-pointer hover:text-mr-gold duration-200">
+                About
+            </h3>
+        </div>
+    </div>
+    <div class="nav-mail-wrapper nav-transform-right nav-right absolute">
+        <h3 class="nav-mail">
+            <a class="no-underline text-mr-white hover:text-mr-gold duration-200" href="mailto:miguelriveroloop@gmail.com?subject=Hello Miguel, I liked your website!">
+                miguelriveroloop@gmail.com
+            </a>
+        </h3>
+    </div>
+</nav>
 </main>
+
+{# NAV #}
+
+{# END NAV #}
