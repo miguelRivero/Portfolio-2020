@@ -1,11 +1,51 @@
-@import url("https://fonts.googleapis.com/css2?family=Muli:wght@700&display=swap");
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Source+Sans+Pro&display=swap'); */
 
 @tailwind base;
 @tailwind components;
 
+body {
+	@apply font-body;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
 #canvas_background {
 	z-index: -1;
 }
+
+.overflow-topname {
+	margin: 0;
+	padding: 0;
+	border-collapse: inherit;
+	box-sizing: inherit;
+	position: absolute;
+	left: 50%;
+	text-align: center;
+	top: 5%;
+	transform: translateX(-50%);
+	z-index: 50000;
+	overflow: hidden;
+	user-select: none;
+	line-height: 23px;
+}
+
+/* #main-title {
+	opacity: 0;
+}
+
+#main-title.is-visible {
+	opacity: 1;
+}
+
+#main-title + .small-main-title {
+	opacity: 1;
+}
+
+#main-title.is-visible + .small-main-title {
+	opacity: 0;
+} */
 
 .nav {
 	z-index: 1000001;
@@ -40,6 +80,7 @@
     display: inline-block;
     padding: 10px;
 }
+
 .absolute-center-x-y {
 	transform: translate(-50%, -50%);
 	top: 50%;
@@ -51,6 +92,50 @@
 	text-align: center;
 }
 
+/* ARROW DOWN */
+#arrowdown {
+    position: absolute;
+    width: 44px;
+    height: 80px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(.5) scaleY(.5);
+    /* cursor: pointer; */
+    z-index: 99999;
+}
+
+#arrowdown .rotateLeft {
+	position: absolute;
+    bottom: 0;
+    transform: rotate(45deg);
+    margin-left: 22px;
+}
+
+#arrowdown .rotateRight {
+	position: absolute;
+    bottom: 0;
+    transform: rotate(-45deg);
+    margin-left: 22px;
+}
+
+.arrow-caps {
+	position: absolute;
+	bottom: 0;
+	width: 1px;
+	height: 16px;
+	transform-origin: 50% 100%;
+}
+
+#arrowdown-trail {
+	height: 80px;
+    width: 1px;
+    text-align: center;
+    position: absolute;
+    transform-origin: 50% 0;
+    margin-left: 22px;
+    top: 0;
+}
+
+
 a {
 	@apply text-ws-blue-500 underline;
 }
@@ -59,6 +144,39 @@ a {
 	animation: rocket 0.7s linear infinite both;
 }
 
+/* GALLERY */
+/* All the snapping stuff */
+#scroll-container {
+    height: 100vh;
+    overflow-y: scroll;
+	/* scroll-snap-type: y mandatory; */
+	position: relative;
+}
+
+.scroll-block {
+    height: 100vh;
+    scroll-snap-align: center;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.greyscale-filter{
+	filter: grayscale(1);
+	opacity: .7;
+}
+
+#showcase picture:hover{
+	filter: none;
+	opacity: 1;
+}
+
+article h3 {
+	letter-spacing: 2px;
+	text-shadow: 1px 1px #0B2D7C, 2px 2px #0B2D7C, 3px 3px #0B2D7C
+
+}
 @keyframes rocket {
 	0% {
 		transform: translate(0);

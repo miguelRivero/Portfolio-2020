@@ -25,6 +25,7 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
+    "gsap": "^3.2.6",
     "postcss-nested": "^4.2.1"
   }
 }

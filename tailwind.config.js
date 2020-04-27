@@ -1,8 +1,9 @@
 module.exports = {
   theme: {
     fontFamily: {
-      'display': ['Muli', 'sans-serif'],
-      'body': ['Muli', 'sans-serif'],
+      'display-sc': ['Playfair Display SC', 'serif'],
+      'display': ['Playfair Display', 'serif'],
+      'body': ['Source Sans Pro', 'sans-serif'],
     },
     extend: {
       colors: {
@@ -17,7 +18,13 @@ module.exports = {
           800: '#003072',
           900: '#00204C',
         },
-        'jet-black': '#0e0e10',
+        'jet-black': '#191919',
+        'mr-dark-blue': '#0B2B76',
+        'mr-blue': '#3282E0',
+        'mr-gold': '#EEC967',
+        'mr-white': '#DCEFF5',
+        'mr-pink': '#BE5263',
+        'mr-grey': '#BFBCBD',
       }
     },
   },

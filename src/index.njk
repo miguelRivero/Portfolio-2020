@@ -3,88 +3,147 @@ layout: base.njk
 title: Miguel Rivero Portfolio 2020 Edition
 ---
 
-<main>
+<main id="top">
     <div class="loader"></div>
-    <div class="overflow-topname"></div>
 
-    <div class="header-name text-white absolute-center-x-y">
-        <h1 class="font-display sm:text-4xl text-3xl font-medium whitespace-no-wrap">
-            Miguel Rivero
-        </h1>
-        <h2 class="text-blue-500 text-base leading-relaxed mx-auto whitespace-no-wrap">
-            Front-end developer
-        </h2>
-        <img src="/static/icon.svg" alt="Rocket icon" class="w-12 mx-auto my-4 rocket">
+    {# SMALL PAGE TITLE #}
+    <div class="small-main-title duration-200 font-display-sc text-xs md:text-xl overflow-topname  hover:text-mr-gold">
+        <a href="#main-title" data-scroll class="no-underline text-mr-white font-display-sc">
+            <div id="topname" class="opacity-0"> Miguel Rivero </div>
+        </a>
+    </div>
+    {# END SMALL PAGE TITLE #}  
+
+    <div id="scroll-container" class="container mx-auto px-16 py-24">
+
+        {# PAGE TITLE #}
+        <section id="main-title" class="scroll-block duration-200">
+            <div class="text-mr-white absolute-center-x-y">
+                <h1 class="font-display-sc sm:text-5xl text-3xl font-medium whitespace-no-wrap">
+                    Miguel Rivero
+                </h1>
+                <h2 class="text-mr-blue uppercase sm:text-base font-body text-base leading-relaxed mx-auto whitespace-no-wrap">
+                    Front-end developer
+                </h2>
+                <img src="/static/icon.svg" alt="Rocket icon" class="w-12 mx-auto my-4 rocket">
+            </div>
+        </section>
+        {# END PAGE TITLE #}  
+
+
+        {# GALLERY #}
+        <section  id="showcase">
+            <article class="scroll-block text-mr-white relative">
+                <h3 class="font-display absolute text-6xl text-right text-mr-blue z-10 transform right-0 -translate-y-24 -translate-x-24">
+                    <div>_Jet8_</div>
+                    <div>Landing</div>
+                </h3>
+                <picture class="greyscale-filter duration-200 z-0">
+                    <a href="https://jet8.io/" target="_blank">
+                        <!--[if IE 9]><video style="display: none;"><![endif]-->
+                        <source srcset="/static/showcase/jet8io_480.gif" media="(max-width: 640px)">
+                        <source srcset="/static/showcase/jet8io_640.gif">
+                        <!--[if IE 9]></video><![endif]-->
+                        <img srcset="/static/showcase/jet8io_640.gif" alt="My default image">
+                    </a>
+                </picture>
+            </article>
+            <article class="scroll-block text-mr-white relative">
+                <h3 class="font-display absolute text-6xl text-left text-mr-blue z-10 transform left-0 -translate-y-24 translate-x-24">
+                    <div>Jet8_</div>
+                    <div>Foundation</div>
+                </h3>
+                <picture class="greyscale-filter duration-200">
+                    <a href="https://den.foundation/" target="_blank">
+                        <!--[if IE 9]><video style="display: none;"><![endif]-->
+                        <source srcset="/static/showcase/jet8Foundation_480.png" media="(max-width: 640px)">
+                        <source srcset="/static/showcase/jet8Foundation_640.png">
+                        <!--[if IE 9]></video><![endif]-->
+                        <img srcset="/static/showcase/jet8Foundation_640.png" alt="My default image">
+                    </a>
+                </picture>
+            </article>
+        </section>
+        {# END GALLERY #}
+
+        <footer class="text-mr-white body-font w-full">
+            <div class="float-right px-0 py-4 mx-auto flex items-center sm:flex-row flex-col">
+                <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                    <a class="text-mr-white opacity-75 hover:opacity-100 duration-200" href="https://www.facebook.com/miguelriverolopez" target="_blank">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewbox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-mr-white opacity-75 hover:opacity-100 duration-200" href="https://twitter.com/migue1rivero" target="_blank">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewbox="0 0 24 24">
+                            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-mr-white opacity-75 hover:opacity-100 duration-200" href="https://www.instagram.com/gatovertical" target="_blank">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewbox="0 0 24 24">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                        </svg>
+                    </a>
+                    <a class="ml-3 text-mr-white opacity-75 hover:opacity-100 duration-200" href="https://www.linkedin.com/in/miguelriverolopez" target="_blank">
+                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewbox="0 0 24 24">
+                            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                        </svg>
+                    </a>
+                </span>
+            </div>
+        </footer>
+
     </div>
 
-    <div class="arrowdown"></div>
-    <div class="wrapper">
+    {# ARROW DOWN #}
+    <a href="#showcase">
+        <div id="arrowdown" class="right-0 bottom-0">
+                <div id="arrowdown-trail" class="bg-mr-white"></div>
+                <div id="arrowdown-caps">
+                <div class="rotateLeft">
+                    <div class="arrow-caps bg-mr-white"></div>
+                </div>
+                <div class="rotateRight"> 
+                    <div class="arrow-caps bg-mr-white"></div>
+                </div>
+                </div>
+        </div>
+    </a>
+    {# END ARROW DOWN #}
+
+    {# 1 0 BACKGROUND #}
+    <section class="wrapper">
         <canvas id="canvas_background" class="absolute top-0 left-0 bg-jet-black"></canvas>
-    </div>
+    </section>
+    {# END BACKGROUND #}
 
-    <div class="nav text-white">
+    {# NAV #}
+    <nav class="nav text-mr-white text-xs md:text-base">
         <div class="nav-left nav-transform absolute">
             <div class="nav-about-wrapper">
-                <h3 class="nav-about">
+                <h3 class="nav-about cursor-pointer hover:text-mr-gold duration-200">
                     About
                 </h3>
             </div>
         </div>
         <div class="nav-mail-wrapper nav-transform-right nav-right absolute">
             <h3 class="nav-mail">
-                <a class="no-underline text-white" href="mailto:miguelriveroloop@gmail.com?subject=Hello Miguel, I liked your website!">
-                    miguelriveroloop@gmail.com</a>
+                <a class="no-underline text-mr-white hover:text-mr-gold duration-200" href="mailto:miguelriveroloop@gmail.com?subject=Hello Miguel, I liked your website!">
+                    miguelriveroloop@gmail.com
+                </a>
             </h3>
         </div>
-    </div>
+    </nav>
+    {# END NAV #}
 
     <div class="grab"></div>
     <div class="about"></div>
     <div id="orientationside"></div>
     <div id="orientation-fallback"></div>
 
-    {# <h1 class="font-bold text-xl mb-2">JAMStack Web Starter <span class="font-light text-gray-500">v{{ pkg.version }}</span></h1>
-    <p>Minimal boilerplate for new projects built with Eleventy, Tailwind, PurgeCSS and PostCSS</p> #}
 
-    {# <ul class="md:flex my-4">
-        <li class="md:flex-auto p-2">
-            <a href="https://github.com/chrisssycollins/web-starter/zipball/master/" class="block no-underline leading-tight p-3 font-bold border-2 border-ws-blue-600 bg-ws-blue-500 text-white rounded hover:bg-ws-blue-600">Download</a>
-        </li>
-        <li class="md:flex-auto p-2">
-            <a href="https://github.com/chrisssycollins/web-starter#features" class="block no-underline text-black leading-tight p-3 font-bold border-2 rounded hover:bg-gray-100">Get started</a>
-        </li>
-    </ul> #}
-    <footer class="text-white body-font absolute bottom-0 w-full">
-        <div class="float-right px-8 py-4 mx-auto flex items-center sm:flex-row flex-col">
-            {# <div class="text-xs text-left sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 mt-4">© 2020 made by
-                <a href="https://github.com/miguelRivero" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">myself</a>
-                <p>I code to love to code</p>
-            </div> #}
-            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-                <a class="text-gray-500" href="https://www.facebook.com/miguelriverolopez" target="_blank">
-                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewbox="0 0 24 24">
-                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                    </svg>
-                </a>
-                <a class="ml-3 text-gray-500" href="https://twitter.com/migue1rivero" target="_blank">
-                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewbox="0 0 24 24">
-                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-                    </svg>
-                </a>
-                <a class="ml-3 text-gray-500" href="https://www.instagram.com/gatovertical" target="_blank">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewbox="0 0 24 24">
-                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-                    </svg>
-                </a>
-                <a class="ml-3 text-gray-500" href="https://www.linkedin.com/in/miguelriverolopez" target="_blank">
-                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewbox="0 0 24 24">
-                        <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-                        <circle cx="4" cy="4" r="2" stroke="none"></circle>
-                    </svg>
-                </a>
-            </span>
-        </div>
-    </footer>
+
 
 </main>
