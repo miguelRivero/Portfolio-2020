@@ -175,15 +175,15 @@ window.onload = function () {
 	var _ease_rough = "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp:  false})"
     var anchors = document.getElementsByTagName("a");
     
-    for (var i = 0, length = anchors.length; i < length; i++) {
-      var anchor = anchors[i];
-      anchor.addEventListener('click', function() {
-        // `this` refers to the anchor tag that's been clicked
-        event.preventDefault();
-        const linkId = this.getAttribute('href');
-        gsap.to(scrollContainer, .75, {ease: _ease, scrollTo: {y:linkId}})
-      }, true);
-    };
+    // for (var i = 0, length = anchors.length; i < length; i++) {
+    //   var anchor = anchors[i];
+    //   anchor.addEventListener('click', function() {
+    //     // `this` refers to the anchor tag that's been clicked
+    //     event.preventDefault();
+    //     const linkId = this.getAttribute('href');
+    //     gsap.to(scrollContainer, .75, {ease: _ease, scrollTo: {y:linkId}})
+    //   }, true);
+    // };
 
 	// topBtn.addEventListener("click", () => {
     //     // event.preventDefault()
@@ -248,11 +248,12 @@ window.onload = function () {
 
 // 	// END SCROLL SNAP
 	const _duration = 1;
-	const ease_1 = 'elastic'
+	const ease_1 = 'power2'
 	// the animation to use
 	const tl = gsap.timeline({paused: true});
 	// tl.from("#topname", {opacity: 1});
-	tl.staggerFromTo('#main-title', 1, {autoAlpha:1}, {top: -10, autoAlpha:0, ease: ease_1})
+	tl.staggerFromTo('#arrowdown', 100, {bottom: '20px'}, {bottom: '-100px', ease: ease_1})
+		.staggerFromTo('#main-title', 1, {autoAlpha:1}, {top: -10, autoAlpha:0, ease: ease_1})
 		.staggerFromTo('#topname', 1, {top:-10, autoAlpha: 0}, {top:40, autoAlpha: 1,  ease: ease_1});
 	// The start and end positions in terms of the page scroll
 	const startY = innerHeight / 10;

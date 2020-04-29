@@ -27,13 +27,17 @@ html {
 	top: 5%;
 	transform: translateX(-50%);
 	z-index: 50000;
-	overflow: hidden;
 	user-select: none;
 	line-height: 23px;
+	text-shadow: 1px 1px 0 #191919, 
+	-1px -1px 0 #191919, 
+	1px -1px 0 #191919, 
+	-1px 1px 0 #191919, 
+	1px 1px 0 #191919
 }
 
 #main-title {
-	height: 100vh;
+	height: calc(100vh - 6rem);
 }
 /* 
 #main-title.is-visible {
@@ -54,11 +58,11 @@ html {
 }
 
 .nav-left {
-	left: 40px
+	left: 20px
 }
 
 .nav-right{
-	right: 40px
+	right: 20px
 }
 .nav-transform {
 	z-index: 1000001;
@@ -75,13 +79,6 @@ html {
     top: 50%;
 }
 
-/* .nav-about-wrapper,  */
-/* .nav-works-wrapper { */
-.nav-mail-wrapper {
-    display: inline-block;
-    padding: 10px;
-}
-
 .absolute-center-x-y {
 	transform: translate(-50%, -50%);
 	top: 50%;
@@ -95,13 +92,12 @@ html {
 
 /* ARROW DOWN */
 #arrowdown {
-    position: absolute;
     width: 44px;
     height: 80px;
     left: 50%;
     transform: translateX(-50%) scaleX(.5) scaleY(.5);
     /* cursor: pointer; */
-    z-index: 99999;
+	z-index: 99999;
 }
 
 #arrowdown .rotateLeft {
@@ -155,12 +151,8 @@ a {
 }
 
 .scroll-block {
-    height: 100vh;
     scroll-snap-align: center;
     padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .greyscale-filter{
@@ -212,6 +204,15 @@ article h3 {
 	}
 	100% {
 		transform: translate(0);
+	}
+}
+
+@media (min-width: 640px) {
+	.nav-left {
+		left: 40px
+	}
+	.nav-right{
+		right: 40px
 	}
 }
 

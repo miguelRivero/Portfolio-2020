@@ -2,8 +2,9 @@ module.exports = {
   theme: {
     fontFamily: {
       'display-sc': ['Playfair Display SC', 'serif'],
-      'display': ['Playfair Display', 'serif'],
-      'body': ['Source Sans Pro', 'sans-serif'],
+      // 'display': ['Playfair Display', 'serif'],
+      'heading': ['Playfair Display', 'serif'],
+      'body': ['Fauna One', 'serif'],
     },
     extend: {
       colors: {
@@ -19,6 +20,7 @@ module.exports = {
           900: '#00204C',
         },
         'jet-black': '#191919',
+        'jet-black-85': 'rgba(25,25,25, .85)',
         'mr-dark-blue': '#0B2B76',
         'mr-blue': '#3282E0',
         'mr-gold': '#EEC967',
