@@ -185,14 +185,14 @@ ready(() => {
 	//First the variables our app is going to use need to be declared
 
 	//References to DOM elements
-	let $slidesContainer = document.getElementById("showcase");
+	let $slidesContainer = document.getElementById("scroll-container");
 	let $slides = $slidesContainer.querySelectorAll(".scroll-block");
 	let $slide_index = 0;
 	let $currentSlide = $slides[$slide_index];
-
+	
 	//Animating flag - is our app animating
 	let isAnimating = false;
-
+	
 	//The height of the window
 	let pageHeight = window.innerHeight;
 
@@ -254,9 +254,11 @@ ready(() => {
 			
 			$currentSlide = $slide;
 			let _index = $currentSlide.getAttribute('index')
+			let _y = pageHeight * _index
+			console.log(_y)
 			//Sliding to current slide
 			gsap.to($slidesContainer, 1, {
-				scrollTo: { y: pageHeight * _index },
+				scrollTo: { y: _y },
 				onComplete: onSlideChangeEnd
 			});
 		}
@@ -275,7 +277,8 @@ ready(() => {
 	 * */
 	function onResize(event) {
 		//This will give us the new height of the window
-		var newPageHeight = window.innerHeight();
+		var newPageHeight = window.innerHeight;
+		let _index = $currentSlide.getAttribute('index')
 
 		/*
 		 *   If the new height is different from the old height ( the browser is resized vertically ), the slides are resized
@@ -288,7 +291,7 @@ ready(() => {
 
 			//The current slide should be always on the top
 			gsap.set($slidesContainer, {
-				scrollTo: { y: pageHeight * $currentSlide.index() },
+				scrollTo: { y: pageHeight * _index },
 			});
 		}
 	}

@@ -3,7 +3,7 @@ layout: base.njk
 title: Miguel Rivero Portfolio 2020 Edition
 ---
 
-<main id="top" class="relative">
+<main id="top" class="relative mx-auto">
 
     <div class="loader"></div>
 
@@ -15,10 +15,10 @@ title: Miguel Rivero Portfolio 2020 Edition
     </div>
     {# END SMALL PAGE TITLE #}  
 
-    <div id="scroll-container" class="container mx-auto px-16 py-24 z-10">
+    <div id="scroll-container" class="container px-16 absolute left-0 top-0 w-full overflow-hidden z-10">
 
         {# PAGE TITLE #}
-        <section id="main-title" class="scroll-block duration-200 relative">
+        <section id="main-title" index="0" class="scroll-block mx-auto max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl duration-200 relative">
             <div class="text-mr-white absolute-center-x-y">
                 <h1 class="font-heading sm:text-5xl text-3xl font-medium whitespace-no-wrap">
                     Miguel Rivero
@@ -33,9 +33,9 @@ title: Miguel Rivero Portfolio 2020 Edition
 
 
         {# GALLERY #}
-        <section  id="showcase" class="max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl mx-auto">
+        {# <section  id="showcase" class="max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl mx-auto"> #}
 
-            <article index="0" class="scroll-block items-start justify-center text-mr-white relative block md:flex w-full">
+            <article index="1" class="scroll-block mx-auto max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl items-start justify-center text-mr-white relative block md:flex w-full">
                 <picture class="z-0 relative inset-0 w-full object-cover object-center">
                         <!--[if IE 9]><video style="display: none;"><![endif]-->
                         <source srcset="/static/showcase/jet8_dash_480.webp" media="(max-width: 640px)" type="image/webp">
@@ -65,7 +65,7 @@ title: Miguel Rivero Portfolio 2020 Edition
                  </div>
             </article>
 
-            <article index="1" class="scroll-block items-start justify-center text-mr-white relative block md:flex w-full">
+            <article index="2" class="scroll-block mx-auto max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl items-start justify-center text-mr-white relative block md:flex w-full">
                 <picture class="z-0 relative inset-0 w-full object-cover object-center">
                         <!--[if IE 9]><video style="display: none;"><![endif]-->
                         <source srcset="/static/showcase/jet8io_480.webp" media="(max-width: 640px)" type="image/webp">
@@ -95,7 +95,7 @@ title: Miguel Rivero Portfolio 2020 Edition
                  </div>
             </article>
 
-            <article index="2" class="scroll-block items-start justify-center text-mr-white relative block md:flex w-full">
+            <article index="3" class="scroll-block mx-auto max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl items-start justify-center text-mr-white relative block md:flex w-full">
                 <picture class="z-0 relative inset-0 w-full object-cover object-center">
                         <!--[if IE 9]><video style="display: none;"><![endif]-->
                         <source srcset="/static/showcase/jet8Foundation_480.webp" media="(max-width: 640px)" type="image/webp">
@@ -125,7 +125,7 @@ title: Miguel Rivero Portfolio 2020 Edition
                  </div>
             </article>
 
-            <article index="3" class="scroll-block items-start justify-center text-mr-white relative block md:flex w-full">
+            <article index="" class="scroll-block mx-auto max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl items-start justify-center text-mr-white relative block md:flex w-full">
                 <picture class="z-0 relative inset-0 w-full object-cover object-center">
                         <!--[if IE 9]><video style="display: none;"><![endif]-->
                         <source srcset="/static/showcase/wallet_480.webp" media="(max-width: 640px)" type="image/webp">
@@ -155,8 +155,10 @@ title: Miguel Rivero Portfolio 2020 Edition
                  </div>
             </article> 
 
-        </section>
+        {# </section> #}
         {# END GALLERY #}
+
+    </div>
 
         <footer class="text-mr-white body-font w-full">
             <div class="float-right px-0 py-4 mx-auto flex items-center sm:flex-row flex-col">
@@ -186,8 +188,6 @@ title: Miguel Rivero Portfolio 2020 Edition
                 </span>
             </div>
         </footer>
-
-    </div>
 
     {# ARROW DOWN #}
     <a href="#showcase" id="arrowdown" class="right-0 fixed">
