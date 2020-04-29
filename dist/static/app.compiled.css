@@ -788,6 +788,7 @@ a {
 .scroll-block {
   scroll-snap-align: center;
   padding: 1rem;
+  height: 100vh;
 }
 
 .greyscale-filter{
@@ -908,6 +909,16 @@ article h3 {
 
   .nav-right{
     right: 40px
+  }
+}
+
+@media (max-width: 639px) {
+  .nav-left {
+    font-size: .5rem;
+  }
+
+  .nav-right{
+    font-size: .5rem;
   }
 }
 

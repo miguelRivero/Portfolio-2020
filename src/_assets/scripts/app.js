@@ -3,7 +3,15 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollToPlugin);
 
-window.onload = function () {
+// Without jQuery
+// Define a convenience method and use it
+var ready = (callback) => {
+	if (document.readyState != "loading") callback();
+	else document.addEventListener("DOMContentLoaded", callback);
+};
+
+ready(() => {
+	/* Do things after DOM has fully loaded */
 
 	// BACKGROUND ANIMATION //
 	var canvas = document.getElementById("canvas_background");
@@ -165,102 +173,156 @@ window.onload = function () {
 	// END BACKGROUND ANIMATION //
 
 	// CLICKS
-    var topEl = document.getElementById("top");
-    var scrollContainer = document.getElementById("scroll-container");
-    var mainTitleEl = document.getElementById("main-title");
-    var showcaseEl = document.getElementById("showcase");
+	var topEl = document.getElementById("top");
+	var scrollContainer = document.getElementById("scroll-container");
+	var mainTitleEl = document.getElementById("main-title");
+	var showcaseEl = document.getElementById("showcase");
 	var topBtn = document.getElementById("topname");
 	var arrowBtn = document.getElementById("arrowdown");
-	var _ease = "power3.out"
-	var _ease_rough = "rough({ template: none.out, strength: 1, points: 20, taper: 'none', randomize: true, clamp:  false})"
-    var anchors = document.getElementsByTagName("a");
-    
-    // for (var i = 0, length = anchors.length; i < length; i++) {
-    //   var anchor = anchors[i];
-    //   anchor.addEventListener('click', function() {
-    //     // `this` refers to the anchor tag that's been clicked
-    //     event.preventDefault();
-    //     const linkId = this.getAttribute('href');
-    //     gsap.to(scrollContainer, .75, {ease: _ease, scrollTo: {y:linkId}})
-    //   }, true);
-    // };
-
-	// topBtn.addEventListener("click", () => {
-    //     // event.preventDefault()
-    //     gsap.to(scrollContainer, {duration: .5, scrollTo: '#main-title'});
-    // });
-    
-	// arrowBtn.addEventListener("click", () => {
-    //     event.preventDefault()
-    //     gsap.to(scrollContainer, {duration: .5, scrollTo: '#showcase'});
-	// });
-
-    // var scrolling = 0;
-
-    // $("body").on("click", ".main-nav a", function(event) {
-    //     scrolling = 1;
-    //     event.preventDefault();
-    //     const linkId = $(this).attr("href");
-    //     gsap.to(scrollContainer, 0.5, {scrollTo: {y:linkId},onComplete:scrollingOff})
-    // });
-        
+	var anchors = document.getElementsByTagName("a");
 
 	// SCROLL SNAP
-// 	const sections = [mainTitleEl, showcaseEl];
-// 	// const sections = [...document.querySelectorAll(".scroll-block")];
+	//First the variables our app is going to use need to be declared
 
-// 	let options = {
-// 		rootMargin: "0px",
-// 		threshold: .25,
-// 	},
-// 	_duration = .75;
+	//References to DOM elements
+	let $slidesContainer = document.getElementById("showcase");
+	let $slides = $slidesContainer.querySelectorAll(".scroll-block");
+	let $slide_index = 0;
+	let $currentSlide = $slides[$slide_index];
 
-// 	const callback = (entries, observer) => {
-// 		entries.forEach((entry) => {
-// 			const { target } = entry;
-// 			console.log(entry.intersectionRatio)
-// 			if (target.id === 'main-title' && entry.intersectionRatio >= options.threshold) {
-// 				console.log("1")
-// 				console.log(target.id)
-// 				gsap.fromTo("#topname", {opacity: 1}, {opacity: 0, ease: _ease_rough, duration: _duration});
-// 				gsap.fromTo("#main-title", {opacity: 0}, {opacity: 1, ease: _ease, duration: _duration});
-// 				gsap.fromTo("#arrowdown", {opacity: 0}, {opacity: 1, ease: _ease, duration: _duration});
-// 				// } else {
-// 					// }
-// 					// target.classList.add("opacity-100");
-// 				} else {
-// 					console.log("2")
-// 					console.log(target.id)
-// 				// if (target.id === 'showcase') {
-// 					gsap.fromTo("#topname", {opacity: 0}, {opacity: 1, ease: _ease_rough, duration: _duration});
-// 					gsap.fromTo("#main-title", {opacity: 1}, {opacity: 0, ease: _ease, duration: _duration});
-// 					gsap.fromTo("#arrowdown", {opacity: 1}, {opacity: 0, ease: _ease, duration: _duration});
-// 				// target.classList.remove("opacity-100");
-// 			}
-// 		});
-// 	};
+	//Animating flag - is our app animating
+	let isAnimating = false;
 
-// 	const observer = new IntersectionObserver(callback, options);
+	//The height of the window
+	let pageHeight = window.innerHeight;
 
-// 	// sections.forEach((section, index) => {
-// 		observer.observe(sections[0]);
-// 	// });
+	//Going to the first slide
+	goToSlide($currentSlide);
 
-// 	// END SCROLL SNAP
+	/*
+	 *   Adding event listeners
+	 * */
+
+	// window.on("resize", onResize).resize();
+	window.addEventListener("resize", onResize);
+	// window.on("mousewheel DOMMouseScroll", onMouseWheel);
+	window.addEventListener("wheel", onMouseWheel);
+
+	/*
+	 *   When user scrolls with the mouse, we have to change slides
+	 * */
+	function onMouseWheel(event) {
+		//Normalize event wheel delta
+		let delta = event.wheelDelta / 30 || -event.detail;
+
+		//If the user scrolled up, it goes to previous slide, otherwise - to next slide
+		if (delta < -1) {
+			goToNextSlide();
+		} else if (delta > 1) {
+			goToPrevSlide();
+		}
+
+		//event.preventDefault();
+	}
+
+	/*
+	 *   If there's a previous slide, slide to it
+	 * */
+	function goToPrevSlide() {
+		if ($currentSlide.previousElementSibling) {
+			goToSlide($currentSlide.previousElementSibling);
+		}
+	}
+
+	/*
+	 *   If there's a next slide, slide to it
+	 * */
+	function goToNextSlide() {
+		if ($currentSlide.nextElementSibling) {
+			goToSlide($currentSlide.nextElementSibling);
+		}
+	}
+
+	/*
+	 *   Actual transition between slides
+	 * */
+	function goToSlide($slide) {
+		//If the slides are not changing and there's such a slide
+		if (!isAnimating) {
+			//setting animating flag to true
+			isAnimating = true;
+			
+			$currentSlide = $slide;
+			let _index = $currentSlide.getAttribute('index')
+			//Sliding to current slide
+			gsap.to($slidesContainer, 1, {
+				scrollTo: { y: pageHeight * _index },
+				onComplete: onSlideChangeEnd
+			});
+		}
+	}
+
+	/*
+	 *   Once the sliding is finished, we need to restore "isAnimating" flag.
+	 *   You can also do other things in this function, such as changing page title
+	 * */
+	function onSlideChangeEnd() {
+		isAnimating = false;
+	}
+
+	/*
+	 *   When user resize it's browser we need to know the new height, so we can properly align the current slide
+	 * */
+	function onResize(event) {
+		//This will give us the new height of the window
+		var newPageHeight = window.innerHeight();
+
+		/*
+		 *   If the new height is different from the old height ( the browser is resized vertically ), the slides are resized
+		 * */
+		if (pageHeight !== newPageHeight) {
+			pageHeight = newPageHeight;
+
+			//This can be done via CSS only, but fails into some old browsers, so I prefer to set height via JS
+			gsap.set([$slidesContainer, $slides], { height: pageHeight + "px" });
+
+			//The current slide should be always on the top
+			gsap.set($slidesContainer, {
+				scrollTo: { y: pageHeight * $currentSlide.index() },
+			});
+		}
+	}
+
+	// END SCROLL SNAP
+
 	const _duration = 1;
-	const ease_1 = 'power2'
+	const ease_1 = "power2";
 	// the animation to use
-	const tl = gsap.timeline({paused: true});
-	// tl.from("#topname", {opacity: 1});
-	tl.staggerFromTo('#arrowdown', 100, {bottom: '20px'}, {bottom: '-100px', ease: ease_1})
-		.staggerFromTo('#main-title', 1, {autoAlpha:1}, {top: -10, autoAlpha:0, ease: ease_1})
-		.staggerFromTo('#topname', 1, {top:-10, autoAlpha: 0}, {top:40, autoAlpha: 1,  ease: ease_1});
+	const tl = gsap.timeline({ paused: true });
+	tl.staggerFromTo(
+		"#arrowdown",
+		_duration,
+		{ bottom: "20px" },
+		{ bottom: "-100px", ease: ease_1 }
+	)
+		.staggerFromTo(
+			"#main-title",
+			_duration,
+			{ autoAlpha: 1 },
+			{ top: -10, autoAlpha: 0, ease: ease_1 }
+		)
+		.staggerFromTo(
+			"#topname",
+			_duration,
+			{ top: -10, autoAlpha: 0 },
+			{ top: 40, autoAlpha: 1, ease: ease_1 }
+		);
 	// The start and end positions in terms of the page scroll
 	const startY = innerHeight / 10;
 	const finishDistance = innerHeight / 5;
-	let requestId = null
+	let requestId = null;
 	// Listen to the scroll event
-	window.addEventListener('scroll', function(e) {
+	window.addEventListener("scroll", function (e) {
 		// Prevent the update from happening too often (throttle the scroll event)
 		if (!requestId) {
 			requestId = requestAnimationFrame(update);
@@ -270,13 +332,8 @@ window.onload = function () {
 	update();
 
 	function update() {
-		// console.log('ipdate')
-		// console.log(scrollY)
-		// Update our animation
 		tl.progress((scrollY - startY) / finishDistance);
-		
 		// Let the scroll event fire again
 		requestId = null;
 	}
-
-};
+});
