@@ -172,29 +172,43 @@ ready(() => {
 	process();
 	// END BACKGROUND ANIMATION //
 
-	// CLICKS
-	var topEl = document.getElementById("top");
-	var scrollContainer = document.getElementById("scroll-container");
-	var mainTitleEl = document.getElementById("main-title");
-	var showcaseEl = document.getElementById("showcase");
-	var topBtn = document.getElementById("topname");
-	var arrowBtn = document.getElementById("arrowdown");
-	var anchors = document.getElementsByTagName("a");
-
 	// SCROLL SNAP
 	//First the variables our app is going to use need to be declared
 
 	//References to DOM elements
-	let $slidesContainer = document.getElementById("scroll-container");
-	let $slides = $slidesContainer.querySelectorAll(".scroll-block");
-	let $slide_index = 0;
-	let $currentSlide = $slides[$slide_index];
+	const $slidesContainer = document.getElementById("scroll-container");
+	const $slides = $slidesContainer.querySelectorAll(".scroll-block");
+	let $currentSlide = $slides[0];
 	
 	//Animating flag - is our app animating
 	let isAnimating = false;
 	
 	//The height of the window
 	let pageHeight = window.innerHeight;
+	
+	const _duration = .3;
+	const ease_1 = "power2";
+	
+	// the animation to use
+	const tl = gsap.timeline({ paused: true });
+	tl.staggerFromTo(
+		"#arrowdown",
+		_duration,
+		{ bottom: "20px" },
+		{ bottom: "-100px", ease: ease_1 }
+	)
+		.staggerFromTo(
+			"#main-title",
+			_duration,
+			{ autoAlpha: 1 },
+			{ top: -10, autoAlpha: 0, ease: ease_1 }
+		)
+		.staggerFromTo(
+			"#topname",
+			_duration,
+			{ top: -10, autoAlpha: 0 },
+			{ top: 40, autoAlpha: 1, ease: ease_1 }
+		);
 
 	//Going to the first slide
 	goToSlide($currentSlide);
@@ -214,29 +228,27 @@ ready(() => {
 	function onMouseWheel(event) {
 		//Normalize event wheel delta
 		let delta = event.wheelDelta / 30 || -event.detail;
-
 		//If the user scrolled up, it goes to previous slide, otherwise - to next slide
 		if (delta < -1) {
 			goToNextSlide();
 		} else if (delta > 1) {
 			goToPrevSlide();
 		}
-
 		//event.preventDefault();
 	}
-
+	
 	/*
-	 *   If there's a previous slide, slide to it
-	 * */
+	*   If there's a previous slide, slide to it
+	* */
 	function goToPrevSlide() {
 		if ($currentSlide.previousElementSibling) {
 			goToSlide($currentSlide.previousElementSibling);
 		}
 	}
-
+	
 	/*
-	 *   If there's a next slide, slide to it
-	 * */
+	*   If there's a next slide, slide to it
+	* */
 	function goToNextSlide() {
 		if ($currentSlide.nextElementSibling) {
 			goToSlide($currentSlide.nextElementSibling);
@@ -250,16 +262,16 @@ ready(() => {
 		//If the slides are not changing and there's such a slide
 		if (!isAnimating) {
 			//setting animating flag to true
-			isAnimating = true;
-			
+			isAnimating = true;			
 			$currentSlide = $slide;
-			let _index = $currentSlide.getAttribute('index')
+			let _index = $slide.getAttribute('index')
 			let _y = pageHeight * _index
-			console.log(_y)
 			//Sliding to current slide
 			gsap.to($slidesContainer, 1, {
 				scrollTo: { y: _y },
-				onComplete: onSlideChangeEnd
+				onComplete: onSlideChangeEnd,
+				onStart: introAnimation,
+				onStartParams: [_index]
 			});
 		}
 	}
@@ -268,6 +280,19 @@ ready(() => {
 	 *   Once the sliding is finished, we need to restore "isAnimating" flag.
 	 *   You can also do other things in this function, such as changing page title
 	 * */
+	function introAnimation(index) {
+		console.log(index)
+		if (index === '1') {
+			tl.play(0)
+		} else if (index === '0') {
+			tl.reverse()
+		} else if (index === '4') {
+			gsap.fromTo("footer", {opacity: 0}, {opacity: 1, duration: _duration, delay: 1, ease: ease_1});
+		} else {
+			gsap.to("footer", {opacity: 0, duration: 0.1, ease: ease_1});
+		}
+	}
+
 	function onSlideChangeEnd() {
 		isAnimating = false;
 	}
@@ -297,46 +322,4 @@ ready(() => {
 	}
 
 	// END SCROLL SNAP
-
-	const _duration = 1;
-	const ease_1 = "power2";
-	// the animation to use
-	const tl = gsap.timeline({ paused: true });
-	tl.staggerFromTo(
-		"#arrowdown",
-		_duration,
-		{ bottom: "20px" },
-		{ bottom: "-100px", ease: ease_1 }
-	)
-		.staggerFromTo(
-			"#main-title",
-			_duration,
-			{ autoAlpha: 1 },
-			{ top: -10, autoAlpha: 0, ease: ease_1 }
-		)
-		.staggerFromTo(
-			"#topname",
-			_duration,
-			{ top: -10, autoAlpha: 0 },
-			{ top: 40, autoAlpha: 1, ease: ease_1 }
-		);
-	// The start and end positions in terms of the page scroll
-	const startY = innerHeight / 10;
-	const finishDistance = innerHeight / 5;
-	let requestId = null;
-	// Listen to the scroll event
-	window.addEventListener("scroll", function (e) {
-		// Prevent the update from happening too often (throttle the scroll event)
-		if (!requestId) {
-			requestId = requestAnimationFrame(update);
-		}
-	});
-
-	update();
-
-	function update() {
-		tl.progress((scrollY - startY) / finishDistance);
-		// Let the scroll event fire again
-		requestId = null;
-	}
 });
