@@ -207,7 +207,7 @@ ready(() => {
 			"#topname",
 			_duration,
 			{ top: -10, autoAlpha: 0 },
-			{ top: 40, autoAlpha: 1, ease: ease_1 }
+			{ top: '3%', autoAlpha: 1, ease: ease_1 }
 		);
 
 	//Going to the first slide
@@ -217,9 +217,7 @@ ready(() => {
 	 *   Adding event listeners
 	 * */
 
-	// window.on("resize", onResize).resize();
 	window.addEventListener("resize", onResize);
-	// window.on("mousewheel DOMMouseScroll", onMouseWheel);
 	window.addEventListener("wheel", onMouseWheel);
 
 	/*
@@ -281,7 +279,6 @@ ready(() => {
 	 *   You can also do other things in this function, such as changing page title
 	 * */
 	function introAnimation(index) {
-		console.log(index)
 		if (index === '1') {
 			tl.play(0)
 		} else if (index === '0') {
@@ -300,9 +297,10 @@ ready(() => {
 	/*
 	 *   When user resize it's browser we need to know the new height, so we can properly align the current slide
 	 * */
-	function onResize(event) {
+	function onResize() {
+		console.log('resize')
 		//This will give us the new height of the window
-		var newPageHeight = window.innerHeight;
+		let newPageHeight = window.innerHeight;
 		let _index = $currentSlide.getAttribute('index')
 
 		/*
@@ -322,4 +320,12 @@ ready(() => {
 	}
 
 	// END SCROLL SNAP
+
+	//TOPNAME LINK
+	const _topName = document.getElementById("topname");
+	_topName.addEventListener("click", function(){
+		goToSlide($slides[0])
+		
+	});
+	//END TOPNAME LINK	
 });
