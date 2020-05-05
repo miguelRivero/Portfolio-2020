@@ -328,4 +328,37 @@ ready(() => {
 		
 	});
 	//END TOPNAME LINK	
+
+	//TOPNAME LINK
+	const aboutBtn = document.getElementById("nav-about-btn");
+	// let about_clicked = false; 
+	let aboutAnimation = gsap.timeline({ paused: true, reversed: true });
+	aboutAnimation.staggerFromTo(['#scroll-container', '#topname', '#arrowdown'], 0.25, {opacity: 1}, {opacity: 0, ease: ease_1}, 0.1)
+		.staggerFromTo("#about", 0.5, { xPercent: -100, x: 0 }, { xPercent: 0, x: 0, ease: ease_1});
+
+	aboutBtn.addEventListener("click", aboutIn, false);
+	
+	// function toggleAbout() {
+	// 	if (about_clicked) {
+	// 		gsap.to('#about', 0.5, { left: '-100%'})
+	// 	} else {
+		// 		gsap.to('#about', 0.5, { left: '0'})
+		// 	}
+		// 	about_clicked = !about_clicked
+		// }
+		
+		function aboutIn() {
+			if (aboutAnimation.reversed()){
+				aboutAnimation.play()
+				aboutBtn.innerHTML = 'Hide';
+			} else {
+				aboutAnimation.reverse();
+				aboutBtn.innerHTML = 'About';
+		}
+	}
+	
+	//END TOPNAME LINK	
 });
+
+
+
