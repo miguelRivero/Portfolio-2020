@@ -219,16 +219,53 @@ ready(() => {
 	/*
 	 *   Adding event listeners
 	 * */
+	let wheelEvt = "onwheel" in document.createElement("div") ? "wheel" : //     Modern browsers support "wheel"
+	document.onmousewheel !== undefined ? "mousewheel" : // Webkit and IE support at least "mousewheel"
+	"DOMMouseScroll"; // let's assume that remaining browsers are older Firefox
 
 	window.addEventListener("resize", onResize);
-	window.addEventListener("wheel", onMouseWheel);
+	window.addEventListener(wheelEvt, onMouseWheel);
+
+
+	gsap.set([$slidesContainer, $slides], { height: pageHeight + "px" });
+
 
 	/*
 	 *   When user scrolls with the mouse, we have to change slides
 	 * */
+	var wheelDistance = function(evt){
+		if (!evt) evt = event;
+		var w=evt.wheelDelta, d=evt.detail;
+		if (d){
+		  if (w) return w/d/40*d>0?1:-1; // Opera
+		  else return -d/3;              // Firefox;         TODO: do not /3 for OS X
+		} else return w/120;             // IE/Safari/Chrome TODO: /3 for Chrome OS X
+	  };
+	  
+	var wheelDirection = function(evt){
+		if (!evt) evt = event;
+		return (evt.detail<0) ? 1 : (evt.wheelDelta>0) ? 1 : -1;
+	};
+
+	var normalize_mousewheel = function(e) {
+		var //o = e.originalEvent,
+			o = e,
+			d = o.detail, w = o.wheelDelta,
+			n = 225, n1 = n-1;
+		
+		// Normalize delta
+		d = d ? w && (f = w/d) ? d/f : -d/1.35 : w/120;
+		// Quadratic scale if |d| > 1
+		d = d < 1 ? d < -1 ? (-Math.pow(d, 2) - n1) / n : d : (Math.pow(d, 2) + n1) / n;
+		// Delta *should* not be greater than 2...
+		return  Math.min(Math.max(d / 2, -1), 1);
+	}
+
 	function onMouseWheel(event) {
 		//Normalize event wheel delta
+		console.log(normalize_mousewheel(event))
 		let delta = event.wheelDelta / 30 || -event.detail;
+
 		//If the user scrolled up, it goes to previous slide, otherwise - to next slide
 		if (delta < -1) {
 			goToNextSlide();
@@ -311,7 +348,6 @@ ready(() => {
 		if (pageHeight !== newPageHeight) {
 			pageHeight = newPageHeight;
 			
-			console.log(pageHeight)
 			//This can be done via CSS only, but fails into some old browsers, so I prefer to set height via JS
 			gsap.set([$slidesContainer, $slides], { height: pageHeight + "px" });
 

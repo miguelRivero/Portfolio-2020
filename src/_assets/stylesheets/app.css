@@ -134,7 +134,8 @@ html {
 /* GALLERY */
 /* All the snapping stuff */
 #scroll-container {
-    height: 100vh;
+	/* height: 100vh; */
+	overflow-y: scroll;
 }
 
 .scroll-block {
