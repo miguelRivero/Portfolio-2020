@@ -654,11 +654,11 @@ html {
       -ms-user-select: none;
           user-select: none;
   line-height: 23px;
-  text-shadow: 1px 1px 0 #191919, 
-	-1px -1px 0 #191919, 
-	1px -1px 0 #191919, 
-	-1px 1px 0 #191919, 
-	1px 1px 0 #191919
+  text-shadow: 1px 1px #0080F5B, 
+	-1px -1px #0080F5B, 
+	1px -1px #0080F5B, 
+	-1px 1px #0080F5B, 
+	1px 1px #0080F5B
 }
 
 #main-title {
@@ -760,11 +760,6 @@ html {
   top: 0;
 }
 
-a {
-  color: #006AFE;
-  text-decoration: underline;
-}
-
 .rocket {
   -webkit-animation: rocket 0.7s linear infinite both;
           animation: rocket 0.7s linear infinite both;
@@ -811,13 +806,14 @@ footer {
 
 #about {
   z-index: 103;
+  display: none
 }
 
 .about-wrapper {
   top: 50%;
-  left: 10%;
-  transform: translateY(50%);
-  /* width: 805px; */
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 @-webkit-keyframes rocket {
@@ -921,6 +917,10 @@ footer {
 
   .nav-right{
     right: 40px
+  }
+
+  .about-wrapper {
+    transform: translateY(50%);
   }
 }
 
@@ -1370,56 +1370,12 @@ footer {
   background-color: #702459;
 }
 
-.bg-ws-blue-100 {
-  background-color: #E6F0FF;
-}
-
-.bg-ws-blue-200 {
-  background-color: #BFDAFF;
-}
-
-.bg-ws-blue-300 {
-  background-color: #99C3FF;
-}
-
-.bg-ws-blue-400 {
-  background-color: #4D97FE;
-}
-
-.bg-ws-blue-500 {
-  background-color: #006AFE;
-}
-
-.bg-ws-blue-600 {
-  background-color: #005FE5;
-}
-
-.bg-ws-blue-700 {
-  background-color: #004098;
-}
-
-.bg-ws-blue-800 {
-  background-color: #003072;
-}
-
-.bg-ws-blue-900 {
-  background-color: #00204C;
-}
-
-.bg-jet-black {
+.bg-mr-blue {
   background-color: #080F5B;
 }
 
-.bg-jet-black-09 {
+.bg-mr-blue-09 {
   background-color: rgba(13,25,163, .9);
-}
-
-.bg-mr-blue {
-  background-color: #0D19A3;
-}
-
-.bg-mr-light-blue {
-  background-color: #3CC7D4;
 }
 
 .bg-mr-lime {
@@ -1814,56 +1770,12 @@ footer {
   background-color: #702459;
 }
 
-.hover\:bg-ws-blue-100:hover {
-  background-color: #E6F0FF;
-}
-
-.hover\:bg-ws-blue-200:hover {
-  background-color: #BFDAFF;
-}
-
-.hover\:bg-ws-blue-300:hover {
-  background-color: #99C3FF;
-}
-
-.hover\:bg-ws-blue-400:hover {
-  background-color: #4D97FE;
-}
-
-.hover\:bg-ws-blue-500:hover {
-  background-color: #006AFE;
-}
-
-.hover\:bg-ws-blue-600:hover {
-  background-color: #005FE5;
-}
-
-.hover\:bg-ws-blue-700:hover {
-  background-color: #004098;
-}
-
-.hover\:bg-ws-blue-800:hover {
-  background-color: #003072;
-}
-
-.hover\:bg-ws-blue-900:hover {
-  background-color: #00204C;
-}
-
-.hover\:bg-jet-black:hover {
+.hover\:bg-mr-blue:hover {
   background-color: #080F5B;
 }
 
-.hover\:bg-jet-black-09:hover {
+.hover\:bg-mr-blue-09:hover {
   background-color: rgba(13,25,163, .9);
-}
-
-.hover\:bg-mr-blue:hover {
-  background-color: #0D19A3;
-}
-
-.hover\:bg-mr-light-blue:hover {
-  background-color: #3CC7D4;
 }
 
 .hover\:bg-mr-lime:hover {
@@ -2258,56 +2170,12 @@ footer {
   background-color: #702459;
 }
 
-.focus\:bg-ws-blue-100:focus {
-  background-color: #E6F0FF;
-}
-
-.focus\:bg-ws-blue-200:focus {
-  background-color: #BFDAFF;
-}
-
-.focus\:bg-ws-blue-300:focus {
-  background-color: #99C3FF;
-}
-
-.focus\:bg-ws-blue-400:focus {
-  background-color: #4D97FE;
-}
-
-.focus\:bg-ws-blue-500:focus {
-  background-color: #006AFE;
-}
-
-.focus\:bg-ws-blue-600:focus {
-  background-color: #005FE5;
-}
-
-.focus\:bg-ws-blue-700:focus {
-  background-color: #004098;
-}
-
-.focus\:bg-ws-blue-800:focus {
-  background-color: #003072;
-}
-
-.focus\:bg-ws-blue-900:focus {
-  background-color: #00204C;
-}
-
-.focus\:bg-jet-black:focus {
+.focus\:bg-mr-blue:focus {
   background-color: #080F5B;
 }
 
-.focus\:bg-jet-black-09:focus {
+.focus\:bg-mr-blue-09:focus {
   background-color: rgba(13,25,163, .9);
-}
-
-.focus\:bg-mr-blue:focus {
-  background-color: #0D19A3;
-}
-
-.focus\:bg-mr-light-blue:focus {
-  background-color: #3CC7D4;
 }
 
 .focus\:bg-mr-lime:focus {
@@ -2782,56 +2650,12 @@ footer {
   border-color: #702459;
 }
 
-.border-ws-blue-100 {
-  border-color: #E6F0FF;
-}
-
-.border-ws-blue-200 {
-  border-color: #BFDAFF;
-}
-
-.border-ws-blue-300 {
-  border-color: #99C3FF;
-}
-
-.border-ws-blue-400 {
-  border-color: #4D97FE;
-}
-
-.border-ws-blue-500 {
-  border-color: #006AFE;
-}
-
-.border-ws-blue-600 {
-  border-color: #005FE5;
-}
-
-.border-ws-blue-700 {
-  border-color: #004098;
-}
-
-.border-ws-blue-800 {
-  border-color: #003072;
-}
-
-.border-ws-blue-900 {
-  border-color: #00204C;
-}
-
-.border-jet-black {
+.border-mr-blue {
   border-color: #080F5B;
 }
 
-.border-jet-black-09 {
+.border-mr-blue-09 {
   border-color: rgba(13,25,163, .9);
-}
-
-.border-mr-blue {
-  border-color: #0D19A3;
-}
-
-.border-mr-light-blue {
-  border-color: #3CC7D4;
 }
 
 .border-mr-lime {
@@ -3226,56 +3050,12 @@ footer {
   border-color: #702459;
 }
 
-.hover\:border-ws-blue-100:hover {
-  border-color: #E6F0FF;
-}
-
-.hover\:border-ws-blue-200:hover {
-  border-color: #BFDAFF;
-}
-
-.hover\:border-ws-blue-300:hover {
-  border-color: #99C3FF;
-}
-
-.hover\:border-ws-blue-400:hover {
-  border-color: #4D97FE;
-}
-
-.hover\:border-ws-blue-500:hover {
-  border-color: #006AFE;
-}
-
-.hover\:border-ws-blue-600:hover {
-  border-color: #005FE5;
-}
-
-.hover\:border-ws-blue-700:hover {
-  border-color: #004098;
-}
-
-.hover\:border-ws-blue-800:hover {
-  border-color: #003072;
-}
-
-.hover\:border-ws-blue-900:hover {
-  border-color: #00204C;
-}
-
-.hover\:border-jet-black:hover {
+.hover\:border-mr-blue:hover {
   border-color: #080F5B;
 }
 
-.hover\:border-jet-black-09:hover {
+.hover\:border-mr-blue-09:hover {
   border-color: rgba(13,25,163, .9);
-}
-
-.hover\:border-mr-blue:hover {
-  border-color: #0D19A3;
-}
-
-.hover\:border-mr-light-blue:hover {
-  border-color: #3CC7D4;
 }
 
 .hover\:border-mr-lime:hover {
@@ -3670,56 +3450,12 @@ footer {
   border-color: #702459;
 }
 
-.focus\:border-ws-blue-100:focus {
-  border-color: #E6F0FF;
-}
-
-.focus\:border-ws-blue-200:focus {
-  border-color: #BFDAFF;
-}
-
-.focus\:border-ws-blue-300:focus {
-  border-color: #99C3FF;
-}
-
-.focus\:border-ws-blue-400:focus {
-  border-color: #4D97FE;
-}
-
-.focus\:border-ws-blue-500:focus {
-  border-color: #006AFE;
-}
-
-.focus\:border-ws-blue-600:focus {
-  border-color: #005FE5;
-}
-
-.focus\:border-ws-blue-700:focus {
-  border-color: #004098;
-}
-
-.focus\:border-ws-blue-800:focus {
-  border-color: #003072;
-}
-
-.focus\:border-ws-blue-900:focus {
-  border-color: #00204C;
-}
-
-.focus\:border-jet-black:focus {
+.focus\:border-mr-blue:focus {
   border-color: #080F5B;
 }
 
-.focus\:border-jet-black-09:focus {
+.focus\:border-mr-blue-09:focus {
   border-color: rgba(13,25,163, .9);
-}
-
-.focus\:border-mr-blue:focus {
-  border-color: #0D19A3;
-}
-
-.focus\:border-mr-light-blue:focus {
-  border-color: #3CC7D4;
 }
 
 .focus\:border-mr-lime:focus {
@@ -8576,264 +8312,44 @@ footer {
   color: #702459;
 }
 
-.placeholder-ws-blue-100::-webkit-input-placeholder {
-  color: #E6F0FF;
-}
-
-.placeholder-ws-blue-100::-moz-placeholder {
-  color: #E6F0FF;
-}
-
-.placeholder-ws-blue-100:-ms-input-placeholder {
-  color: #E6F0FF;
-}
-
-.placeholder-ws-blue-100::-ms-input-placeholder {
-  color: #E6F0FF;
-}
-
-.placeholder-ws-blue-100::placeholder {
-  color: #E6F0FF;
-}
-
-.placeholder-ws-blue-200::-webkit-input-placeholder {
-  color: #BFDAFF;
-}
-
-.placeholder-ws-blue-200::-moz-placeholder {
-  color: #BFDAFF;
-}
-
-.placeholder-ws-blue-200:-ms-input-placeholder {
-  color: #BFDAFF;
-}
-
-.placeholder-ws-blue-200::-ms-input-placeholder {
-  color: #BFDAFF;
-}
-
-.placeholder-ws-blue-200::placeholder {
-  color: #BFDAFF;
-}
-
-.placeholder-ws-blue-300::-webkit-input-placeholder {
-  color: #99C3FF;
-}
-
-.placeholder-ws-blue-300::-moz-placeholder {
-  color: #99C3FF;
-}
-
-.placeholder-ws-blue-300:-ms-input-placeholder {
-  color: #99C3FF;
-}
-
-.placeholder-ws-blue-300::-ms-input-placeholder {
-  color: #99C3FF;
-}
-
-.placeholder-ws-blue-300::placeholder {
-  color: #99C3FF;
-}
-
-.placeholder-ws-blue-400::-webkit-input-placeholder {
-  color: #4D97FE;
-}
-
-.placeholder-ws-blue-400::-moz-placeholder {
-  color: #4D97FE;
-}
-
-.placeholder-ws-blue-400:-ms-input-placeholder {
-  color: #4D97FE;
-}
-
-.placeholder-ws-blue-400::-ms-input-placeholder {
-  color: #4D97FE;
-}
-
-.placeholder-ws-blue-400::placeholder {
-  color: #4D97FE;
-}
-
-.placeholder-ws-blue-500::-webkit-input-placeholder {
-  color: #006AFE;
-}
-
-.placeholder-ws-blue-500::-moz-placeholder {
-  color: #006AFE;
-}
-
-.placeholder-ws-blue-500:-ms-input-placeholder {
-  color: #006AFE;
-}
-
-.placeholder-ws-blue-500::-ms-input-placeholder {
-  color: #006AFE;
-}
-
-.placeholder-ws-blue-500::placeholder {
-  color: #006AFE;
-}
-
-.placeholder-ws-blue-600::-webkit-input-placeholder {
-  color: #005FE5;
-}
-
-.placeholder-ws-blue-600::-moz-placeholder {
-  color: #005FE5;
-}
-
-.placeholder-ws-blue-600:-ms-input-placeholder {
-  color: #005FE5;
-}
-
-.placeholder-ws-blue-600::-ms-input-placeholder {
-  color: #005FE5;
-}
-
-.placeholder-ws-blue-600::placeholder {
-  color: #005FE5;
-}
-
-.placeholder-ws-blue-700::-webkit-input-placeholder {
-  color: #004098;
-}
-
-.placeholder-ws-blue-700::-moz-placeholder {
-  color: #004098;
-}
-
-.placeholder-ws-blue-700:-ms-input-placeholder {
-  color: #004098;
-}
-
-.placeholder-ws-blue-700::-ms-input-placeholder {
-  color: #004098;
-}
-
-.placeholder-ws-blue-700::placeholder {
-  color: #004098;
-}
-
-.placeholder-ws-blue-800::-webkit-input-placeholder {
-  color: #003072;
-}
-
-.placeholder-ws-blue-800::-moz-placeholder {
-  color: #003072;
-}
-
-.placeholder-ws-blue-800:-ms-input-placeholder {
-  color: #003072;
-}
-
-.placeholder-ws-blue-800::-ms-input-placeholder {
-  color: #003072;
-}
-
-.placeholder-ws-blue-800::placeholder {
-  color: #003072;
-}
-
-.placeholder-ws-blue-900::-webkit-input-placeholder {
-  color: #00204C;
-}
-
-.placeholder-ws-blue-900::-moz-placeholder {
-  color: #00204C;
-}
-
-.placeholder-ws-blue-900:-ms-input-placeholder {
-  color: #00204C;
-}
-
-.placeholder-ws-blue-900::-ms-input-placeholder {
-  color: #00204C;
-}
-
-.placeholder-ws-blue-900::placeholder {
-  color: #00204C;
-}
-
-.placeholder-jet-black::-webkit-input-placeholder {
-  color: #080F5B;
-}
-
-.placeholder-jet-black::-moz-placeholder {
-  color: #080F5B;
-}
-
-.placeholder-jet-black:-ms-input-placeholder {
-  color: #080F5B;
-}
-
-.placeholder-jet-black::-ms-input-placeholder {
-  color: #080F5B;
-}
-
-.placeholder-jet-black::placeholder {
-  color: #080F5B;
-}
-
-.placeholder-jet-black-09::-webkit-input-placeholder {
-  color: rgba(13,25,163, .9);
-}
-
-.placeholder-jet-black-09::-moz-placeholder {
-  color: rgba(13,25,163, .9);
-}
-
-.placeholder-jet-black-09:-ms-input-placeholder {
-  color: rgba(13,25,163, .9);
-}
-
-.placeholder-jet-black-09::-ms-input-placeholder {
-  color: rgba(13,25,163, .9);
-}
-
-.placeholder-jet-black-09::placeholder {
-  color: rgba(13,25,163, .9);
-}
-
 .placeholder-mr-blue::-webkit-input-placeholder {
-  color: #0D19A3;
+  color: #080F5B;
 }
 
 .placeholder-mr-blue::-moz-placeholder {
-  color: #0D19A3;
+  color: #080F5B;
 }
 
 .placeholder-mr-blue:-ms-input-placeholder {
-  color: #0D19A3;
+  color: #080F5B;
 }
 
 .placeholder-mr-blue::-ms-input-placeholder {
-  color: #0D19A3;
+  color: #080F5B;
 }
 
 .placeholder-mr-blue::placeholder {
-  color: #0D19A3;
+  color: #080F5B;
 }
 
-.placeholder-mr-light-blue::-webkit-input-placeholder {
-  color: #3CC7D4;
+.placeholder-mr-blue-09::-webkit-input-placeholder {
+  color: rgba(13,25,163, .9);
 }
 
-.placeholder-mr-light-blue::-moz-placeholder {
-  color: #3CC7D4;
+.placeholder-mr-blue-09::-moz-placeholder {
+  color: rgba(13,25,163, .9);
 }
 
-.placeholder-mr-light-blue:-ms-input-placeholder {
-  color: #3CC7D4;
+.placeholder-mr-blue-09:-ms-input-placeholder {
+  color: rgba(13,25,163, .9);
 }
 
-.placeholder-mr-light-blue::-ms-input-placeholder {
-  color: #3CC7D4;
+.placeholder-mr-blue-09::-ms-input-placeholder {
+  color: rgba(13,25,163, .9);
 }
 
-.placeholder-mr-light-blue::placeholder {
-  color: #3CC7D4;
+.placeholder-mr-blue-09::placeholder {
+  color: rgba(13,25,163, .9);
 }
 
 .placeholder-mr-lime::-webkit-input-placeholder {
@@ -10796,264 +10312,44 @@ footer {
   color: #702459;
 }
 
-.focus\:placeholder-ws-blue-100:focus::-webkit-input-placeholder {
-  color: #E6F0FF;
-}
-
-.focus\:placeholder-ws-blue-100:focus::-moz-placeholder {
-  color: #E6F0FF;
-}
-
-.focus\:placeholder-ws-blue-100:focus:-ms-input-placeholder {
-  color: #E6F0FF;
-}
-
-.focus\:placeholder-ws-blue-100:focus::-ms-input-placeholder {
-  color: #E6F0FF;
-}
-
-.focus\:placeholder-ws-blue-100:focus::placeholder {
-  color: #E6F0FF;
-}
-
-.focus\:placeholder-ws-blue-200:focus::-webkit-input-placeholder {
-  color: #BFDAFF;
-}
-
-.focus\:placeholder-ws-blue-200:focus::-moz-placeholder {
-  color: #BFDAFF;
-}
-
-.focus\:placeholder-ws-blue-200:focus:-ms-input-placeholder {
-  color: #BFDAFF;
-}
-
-.focus\:placeholder-ws-blue-200:focus::-ms-input-placeholder {
-  color: #BFDAFF;
-}
-
-.focus\:placeholder-ws-blue-200:focus::placeholder {
-  color: #BFDAFF;
-}
-
-.focus\:placeholder-ws-blue-300:focus::-webkit-input-placeholder {
-  color: #99C3FF;
-}
-
-.focus\:placeholder-ws-blue-300:focus::-moz-placeholder {
-  color: #99C3FF;
-}
-
-.focus\:placeholder-ws-blue-300:focus:-ms-input-placeholder {
-  color: #99C3FF;
-}
-
-.focus\:placeholder-ws-blue-300:focus::-ms-input-placeholder {
-  color: #99C3FF;
-}
-
-.focus\:placeholder-ws-blue-300:focus::placeholder {
-  color: #99C3FF;
-}
-
-.focus\:placeholder-ws-blue-400:focus::-webkit-input-placeholder {
-  color: #4D97FE;
-}
-
-.focus\:placeholder-ws-blue-400:focus::-moz-placeholder {
-  color: #4D97FE;
-}
-
-.focus\:placeholder-ws-blue-400:focus:-ms-input-placeholder {
-  color: #4D97FE;
-}
-
-.focus\:placeholder-ws-blue-400:focus::-ms-input-placeholder {
-  color: #4D97FE;
-}
-
-.focus\:placeholder-ws-blue-400:focus::placeholder {
-  color: #4D97FE;
-}
-
-.focus\:placeholder-ws-blue-500:focus::-webkit-input-placeholder {
-  color: #006AFE;
-}
-
-.focus\:placeholder-ws-blue-500:focus::-moz-placeholder {
-  color: #006AFE;
-}
-
-.focus\:placeholder-ws-blue-500:focus:-ms-input-placeholder {
-  color: #006AFE;
-}
-
-.focus\:placeholder-ws-blue-500:focus::-ms-input-placeholder {
-  color: #006AFE;
-}
-
-.focus\:placeholder-ws-blue-500:focus::placeholder {
-  color: #006AFE;
-}
-
-.focus\:placeholder-ws-blue-600:focus::-webkit-input-placeholder {
-  color: #005FE5;
-}
-
-.focus\:placeholder-ws-blue-600:focus::-moz-placeholder {
-  color: #005FE5;
-}
-
-.focus\:placeholder-ws-blue-600:focus:-ms-input-placeholder {
-  color: #005FE5;
-}
-
-.focus\:placeholder-ws-blue-600:focus::-ms-input-placeholder {
-  color: #005FE5;
-}
-
-.focus\:placeholder-ws-blue-600:focus::placeholder {
-  color: #005FE5;
-}
-
-.focus\:placeholder-ws-blue-700:focus::-webkit-input-placeholder {
-  color: #004098;
-}
-
-.focus\:placeholder-ws-blue-700:focus::-moz-placeholder {
-  color: #004098;
-}
-
-.focus\:placeholder-ws-blue-700:focus:-ms-input-placeholder {
-  color: #004098;
-}
-
-.focus\:placeholder-ws-blue-700:focus::-ms-input-placeholder {
-  color: #004098;
-}
-
-.focus\:placeholder-ws-blue-700:focus::placeholder {
-  color: #004098;
-}
-
-.focus\:placeholder-ws-blue-800:focus::-webkit-input-placeholder {
-  color: #003072;
-}
-
-.focus\:placeholder-ws-blue-800:focus::-moz-placeholder {
-  color: #003072;
-}
-
-.focus\:placeholder-ws-blue-800:focus:-ms-input-placeholder {
-  color: #003072;
-}
-
-.focus\:placeholder-ws-blue-800:focus::-ms-input-placeholder {
-  color: #003072;
-}
-
-.focus\:placeholder-ws-blue-800:focus::placeholder {
-  color: #003072;
-}
-
-.focus\:placeholder-ws-blue-900:focus::-webkit-input-placeholder {
-  color: #00204C;
-}
-
-.focus\:placeholder-ws-blue-900:focus::-moz-placeholder {
-  color: #00204C;
-}
-
-.focus\:placeholder-ws-blue-900:focus:-ms-input-placeholder {
-  color: #00204C;
-}
-
-.focus\:placeholder-ws-blue-900:focus::-ms-input-placeholder {
-  color: #00204C;
-}
-
-.focus\:placeholder-ws-blue-900:focus::placeholder {
-  color: #00204C;
-}
-
-.focus\:placeholder-jet-black:focus::-webkit-input-placeholder {
-  color: #080F5B;
-}
-
-.focus\:placeholder-jet-black:focus::-moz-placeholder {
-  color: #080F5B;
-}
-
-.focus\:placeholder-jet-black:focus:-ms-input-placeholder {
-  color: #080F5B;
-}
-
-.focus\:placeholder-jet-black:focus::-ms-input-placeholder {
-  color: #080F5B;
-}
-
-.focus\:placeholder-jet-black:focus::placeholder {
-  color: #080F5B;
-}
-
-.focus\:placeholder-jet-black-09:focus::-webkit-input-placeholder {
-  color: rgba(13,25,163, .9);
-}
-
-.focus\:placeholder-jet-black-09:focus::-moz-placeholder {
-  color: rgba(13,25,163, .9);
-}
-
-.focus\:placeholder-jet-black-09:focus:-ms-input-placeholder {
-  color: rgba(13,25,163, .9);
-}
-
-.focus\:placeholder-jet-black-09:focus::-ms-input-placeholder {
-  color: rgba(13,25,163, .9);
-}
-
-.focus\:placeholder-jet-black-09:focus::placeholder {
-  color: rgba(13,25,163, .9);
-}
-
 .focus\:placeholder-mr-blue:focus::-webkit-input-placeholder {
-  color: #0D19A3;
+  color: #080F5B;
 }
 
 .focus\:placeholder-mr-blue:focus::-moz-placeholder {
-  color: #0D19A3;
+  color: #080F5B;
 }
 
 .focus\:placeholder-mr-blue:focus:-ms-input-placeholder {
-  color: #0D19A3;
+  color: #080F5B;
 }
 
 .focus\:placeholder-mr-blue:focus::-ms-input-placeholder {
-  color: #0D19A3;
+  color: #080F5B;
 }
 
 .focus\:placeholder-mr-blue:focus::placeholder {
-  color: #0D19A3;
+  color: #080F5B;
 }
 
-.focus\:placeholder-mr-light-blue:focus::-webkit-input-placeholder {
-  color: #3CC7D4;
+.focus\:placeholder-mr-blue-09:focus::-webkit-input-placeholder {
+  color: rgba(13,25,163, .9);
 }
 
-.focus\:placeholder-mr-light-blue:focus::-moz-placeholder {
-  color: #3CC7D4;
+.focus\:placeholder-mr-blue-09:focus::-moz-placeholder {
+  color: rgba(13,25,163, .9);
 }
 
-.focus\:placeholder-mr-light-blue:focus:-ms-input-placeholder {
-  color: #3CC7D4;
+.focus\:placeholder-mr-blue-09:focus:-ms-input-placeholder {
+  color: rgba(13,25,163, .9);
 }
 
-.focus\:placeholder-mr-light-blue:focus::-ms-input-placeholder {
-  color: #3CC7D4;
+.focus\:placeholder-mr-blue-09:focus::-ms-input-placeholder {
+  color: rgba(13,25,163, .9);
 }
 
-.focus\:placeholder-mr-light-blue:focus::placeholder {
-  color: #3CC7D4;
+.focus\:placeholder-mr-blue-09:focus::placeholder {
+  color: rgba(13,25,163, .9);
 }
 
 .focus\:placeholder-mr-lime:focus::-webkit-input-placeholder {
@@ -11803,56 +11099,12 @@ footer {
   color: #702459;
 }
 
-.text-ws-blue-100 {
-  color: #E6F0FF;
-}
-
-.text-ws-blue-200 {
-  color: #BFDAFF;
-}
-
-.text-ws-blue-300 {
-  color: #99C3FF;
-}
-
-.text-ws-blue-400 {
-  color: #4D97FE;
-}
-
-.text-ws-blue-500 {
-  color: #006AFE;
-}
-
-.text-ws-blue-600 {
-  color: #005FE5;
-}
-
-.text-ws-blue-700 {
-  color: #004098;
-}
-
-.text-ws-blue-800 {
-  color: #003072;
-}
-
-.text-ws-blue-900 {
-  color: #00204C;
-}
-
-.text-jet-black {
+.text-mr-blue {
   color: #080F5B;
 }
 
-.text-jet-black-09 {
+.text-mr-blue-09 {
   color: rgba(13,25,163, .9);
-}
-
-.text-mr-blue {
-  color: #0D19A3;
-}
-
-.text-mr-light-blue {
-  color: #3CC7D4;
 }
 
 .text-mr-lime {
@@ -12247,56 +11499,12 @@ footer {
   color: #702459;
 }
 
-.hover\:text-ws-blue-100:hover {
-  color: #E6F0FF;
-}
-
-.hover\:text-ws-blue-200:hover {
-  color: #BFDAFF;
-}
-
-.hover\:text-ws-blue-300:hover {
-  color: #99C3FF;
-}
-
-.hover\:text-ws-blue-400:hover {
-  color: #4D97FE;
-}
-
-.hover\:text-ws-blue-500:hover {
-  color: #006AFE;
-}
-
-.hover\:text-ws-blue-600:hover {
-  color: #005FE5;
-}
-
-.hover\:text-ws-blue-700:hover {
-  color: #004098;
-}
-
-.hover\:text-ws-blue-800:hover {
-  color: #003072;
-}
-
-.hover\:text-ws-blue-900:hover {
-  color: #00204C;
-}
-
-.hover\:text-jet-black:hover {
+.hover\:text-mr-blue:hover {
   color: #080F5B;
 }
 
-.hover\:text-jet-black-09:hover {
+.hover\:text-mr-blue-09:hover {
   color: rgba(13,25,163, .9);
-}
-
-.hover\:text-mr-blue:hover {
-  color: #0D19A3;
-}
-
-.hover\:text-mr-light-blue:hover {
-  color: #3CC7D4;
 }
 
 .hover\:text-mr-lime:hover {
@@ -12691,56 +11899,12 @@ footer {
   color: #702459;
 }
 
-.focus\:text-ws-blue-100:focus {
-  color: #E6F0FF;
-}
-
-.focus\:text-ws-blue-200:focus {
-  color: #BFDAFF;
-}
-
-.focus\:text-ws-blue-300:focus {
-  color: #99C3FF;
-}
-
-.focus\:text-ws-blue-400:focus {
-  color: #4D97FE;
-}
-
-.focus\:text-ws-blue-500:focus {
-  color: #006AFE;
-}
-
-.focus\:text-ws-blue-600:focus {
-  color: #005FE5;
-}
-
-.focus\:text-ws-blue-700:focus {
-  color: #004098;
-}
-
-.focus\:text-ws-blue-800:focus {
-  color: #003072;
-}
-
-.focus\:text-ws-blue-900:focus {
-  color: #00204C;
-}
-
-.focus\:text-jet-black:focus {
+.focus\:text-mr-blue:focus {
   color: #080F5B;
 }
 
-.focus\:text-jet-black-09:focus {
+.focus\:text-mr-blue-09:focus {
   color: rgba(13,25,163, .9);
-}
-
-.focus\:text-mr-blue:focus {
-  color: #0D19A3;
-}
-
-.focus\:text-mr-light-blue:focus {
-  color: #3CC7D4;
 }
 
 .focus\:text-mr-lime:focus {
@@ -16062,56 +15226,12 @@ footer {
     background-color: #702459;
   }
 
-  .sm\:bg-ws-blue-100 {
-    background-color: #E6F0FF;
-  }
-
-  .sm\:bg-ws-blue-200 {
-    background-color: #BFDAFF;
-  }
-
-  .sm\:bg-ws-blue-300 {
-    background-color: #99C3FF;
-  }
-
-  .sm\:bg-ws-blue-400 {
-    background-color: #4D97FE;
-  }
-
-  .sm\:bg-ws-blue-500 {
-    background-color: #006AFE;
-  }
-
-  .sm\:bg-ws-blue-600 {
-    background-color: #005FE5;
-  }
-
-  .sm\:bg-ws-blue-700 {
-    background-color: #004098;
-  }
-
-  .sm\:bg-ws-blue-800 {
-    background-color: #003072;
-  }
-
-  .sm\:bg-ws-blue-900 {
-    background-color: #00204C;
-  }
-
-  .sm\:bg-jet-black {
+  .sm\:bg-mr-blue {
     background-color: #080F5B;
   }
 
-  .sm\:bg-jet-black-09 {
+  .sm\:bg-mr-blue-09 {
     background-color: rgba(13,25,163, .9);
-  }
-
-  .sm\:bg-mr-blue {
-    background-color: #0D19A3;
-  }
-
-  .sm\:bg-mr-light-blue {
-    background-color: #3CC7D4;
   }
 
   .sm\:bg-mr-lime {
@@ -16506,56 +15626,12 @@ footer {
     background-color: #702459;
   }
 
-  .sm\:hover\:bg-ws-blue-100:hover {
-    background-color: #E6F0FF;
-  }
-
-  .sm\:hover\:bg-ws-blue-200:hover {
-    background-color: #BFDAFF;
-  }
-
-  .sm\:hover\:bg-ws-blue-300:hover {
-    background-color: #99C3FF;
-  }
-
-  .sm\:hover\:bg-ws-blue-400:hover {
-    background-color: #4D97FE;
-  }
-
-  .sm\:hover\:bg-ws-blue-500:hover {
-    background-color: #006AFE;
-  }
-
-  .sm\:hover\:bg-ws-blue-600:hover {
-    background-color: #005FE5;
-  }
-
-  .sm\:hover\:bg-ws-blue-700:hover {
-    background-color: #004098;
-  }
-
-  .sm\:hover\:bg-ws-blue-800:hover {
-    background-color: #003072;
-  }
-
-  .sm\:hover\:bg-ws-blue-900:hover {
-    background-color: #00204C;
-  }
-
-  .sm\:hover\:bg-jet-black:hover {
+  .sm\:hover\:bg-mr-blue:hover {
     background-color: #080F5B;
   }
 
-  .sm\:hover\:bg-jet-black-09:hover {
+  .sm\:hover\:bg-mr-blue-09:hover {
     background-color: rgba(13,25,163, .9);
-  }
-
-  .sm\:hover\:bg-mr-blue:hover {
-    background-color: #0D19A3;
-  }
-
-  .sm\:hover\:bg-mr-light-blue:hover {
-    background-color: #3CC7D4;
   }
 
   .sm\:hover\:bg-mr-lime:hover {
@@ -16950,56 +16026,12 @@ footer {
     background-color: #702459;
   }
 
-  .sm\:focus\:bg-ws-blue-100:focus {
-    background-color: #E6F0FF;
-  }
-
-  .sm\:focus\:bg-ws-blue-200:focus {
-    background-color: #BFDAFF;
-  }
-
-  .sm\:focus\:bg-ws-blue-300:focus {
-    background-color: #99C3FF;
-  }
-
-  .sm\:focus\:bg-ws-blue-400:focus {
-    background-color: #4D97FE;
-  }
-
-  .sm\:focus\:bg-ws-blue-500:focus {
-    background-color: #006AFE;
-  }
-
-  .sm\:focus\:bg-ws-blue-600:focus {
-    background-color: #005FE5;
-  }
-
-  .sm\:focus\:bg-ws-blue-700:focus {
-    background-color: #004098;
-  }
-
-  .sm\:focus\:bg-ws-blue-800:focus {
-    background-color: #003072;
-  }
-
-  .sm\:focus\:bg-ws-blue-900:focus {
-    background-color: #00204C;
-  }
-
-  .sm\:focus\:bg-jet-black:focus {
+  .sm\:focus\:bg-mr-blue:focus {
     background-color: #080F5B;
   }
 
-  .sm\:focus\:bg-jet-black-09:focus {
+  .sm\:focus\:bg-mr-blue-09:focus {
     background-color: rgba(13,25,163, .9);
-  }
-
-  .sm\:focus\:bg-mr-blue:focus {
-    background-color: #0D19A3;
-  }
-
-  .sm\:focus\:bg-mr-light-blue:focus {
-    background-color: #3CC7D4;
   }
 
   .sm\:focus\:bg-mr-lime:focus {
@@ -17474,56 +16506,12 @@ footer {
     border-color: #702459;
   }
 
-  .sm\:border-ws-blue-100 {
-    border-color: #E6F0FF;
-  }
-
-  .sm\:border-ws-blue-200 {
-    border-color: #BFDAFF;
-  }
-
-  .sm\:border-ws-blue-300 {
-    border-color: #99C3FF;
-  }
-
-  .sm\:border-ws-blue-400 {
-    border-color: #4D97FE;
-  }
-
-  .sm\:border-ws-blue-500 {
-    border-color: #006AFE;
-  }
-
-  .sm\:border-ws-blue-600 {
-    border-color: #005FE5;
-  }
-
-  .sm\:border-ws-blue-700 {
-    border-color: #004098;
-  }
-
-  .sm\:border-ws-blue-800 {
-    border-color: #003072;
-  }
-
-  .sm\:border-ws-blue-900 {
-    border-color: #00204C;
-  }
-
-  .sm\:border-jet-black {
+  .sm\:border-mr-blue {
     border-color: #080F5B;
   }
 
-  .sm\:border-jet-black-09 {
+  .sm\:border-mr-blue-09 {
     border-color: rgba(13,25,163, .9);
-  }
-
-  .sm\:border-mr-blue {
-    border-color: #0D19A3;
-  }
-
-  .sm\:border-mr-light-blue {
-    border-color: #3CC7D4;
   }
 
   .sm\:border-mr-lime {
@@ -17918,56 +16906,12 @@ footer {
     border-color: #702459;
   }
 
-  .sm\:hover\:border-ws-blue-100:hover {
-    border-color: #E6F0FF;
-  }
-
-  .sm\:hover\:border-ws-blue-200:hover {
-    border-color: #BFDAFF;
-  }
-
-  .sm\:hover\:border-ws-blue-300:hover {
-    border-color: #99C3FF;
-  }
-
-  .sm\:hover\:border-ws-blue-400:hover {
-    border-color: #4D97FE;
-  }
-
-  .sm\:hover\:border-ws-blue-500:hover {
-    border-color: #006AFE;
-  }
-
-  .sm\:hover\:border-ws-blue-600:hover {
-    border-color: #005FE5;
-  }
-
-  .sm\:hover\:border-ws-blue-700:hover {
-    border-color: #004098;
-  }
-
-  .sm\:hover\:border-ws-blue-800:hover {
-    border-color: #003072;
-  }
-
-  .sm\:hover\:border-ws-blue-900:hover {
-    border-color: #00204C;
-  }
-
-  .sm\:hover\:border-jet-black:hover {
+  .sm\:hover\:border-mr-blue:hover {
     border-color: #080F5B;
   }
 
-  .sm\:hover\:border-jet-black-09:hover {
+  .sm\:hover\:border-mr-blue-09:hover {
     border-color: rgba(13,25,163, .9);
-  }
-
-  .sm\:hover\:border-mr-blue:hover {
-    border-color: #0D19A3;
-  }
-
-  .sm\:hover\:border-mr-light-blue:hover {
-    border-color: #3CC7D4;
   }
 
   .sm\:hover\:border-mr-lime:hover {
@@ -18362,56 +17306,12 @@ footer {
     border-color: #702459;
   }
 
-  .sm\:focus\:border-ws-blue-100:focus {
-    border-color: #E6F0FF;
-  }
-
-  .sm\:focus\:border-ws-blue-200:focus {
-    border-color: #BFDAFF;
-  }
-
-  .sm\:focus\:border-ws-blue-300:focus {
-    border-color: #99C3FF;
-  }
-
-  .sm\:focus\:border-ws-blue-400:focus {
-    border-color: #4D97FE;
-  }
-
-  .sm\:focus\:border-ws-blue-500:focus {
-    border-color: #006AFE;
-  }
-
-  .sm\:focus\:border-ws-blue-600:focus {
-    border-color: #005FE5;
-  }
-
-  .sm\:focus\:border-ws-blue-700:focus {
-    border-color: #004098;
-  }
-
-  .sm\:focus\:border-ws-blue-800:focus {
-    border-color: #003072;
-  }
-
-  .sm\:focus\:border-ws-blue-900:focus {
-    border-color: #00204C;
-  }
-
-  .sm\:focus\:border-jet-black:focus {
+  .sm\:focus\:border-mr-blue:focus {
     border-color: #080F5B;
   }
 
-  .sm\:focus\:border-jet-black-09:focus {
+  .sm\:focus\:border-mr-blue-09:focus {
     border-color: rgba(13,25,163, .9);
-  }
-
-  .sm\:focus\:border-mr-blue:focus {
-    border-color: #0D19A3;
-  }
-
-  .sm\:focus\:border-mr-light-blue:focus {
-    border-color: #3CC7D4;
   }
 
   .sm\:focus\:border-mr-lime:focus {
@@ -23268,264 +22168,44 @@ footer {
     color: #702459;
   }
 
-  .sm\:placeholder-ws-blue-100::-webkit-input-placeholder {
-    color: #E6F0FF;
-  }
-
-  .sm\:placeholder-ws-blue-100::-moz-placeholder {
-    color: #E6F0FF;
-  }
-
-  .sm\:placeholder-ws-blue-100:-ms-input-placeholder {
-    color: #E6F0FF;
-  }
-
-  .sm\:placeholder-ws-blue-100::-ms-input-placeholder {
-    color: #E6F0FF;
-  }
-
-  .sm\:placeholder-ws-blue-100::placeholder {
-    color: #E6F0FF;
-  }
-
-  .sm\:placeholder-ws-blue-200::-webkit-input-placeholder {
-    color: #BFDAFF;
-  }
-
-  .sm\:placeholder-ws-blue-200::-moz-placeholder {
-    color: #BFDAFF;
-  }
-
-  .sm\:placeholder-ws-blue-200:-ms-input-placeholder {
-    color: #BFDAFF;
-  }
-
-  .sm\:placeholder-ws-blue-200::-ms-input-placeholder {
-    color: #BFDAFF;
-  }
-
-  .sm\:placeholder-ws-blue-200::placeholder {
-    color: #BFDAFF;
-  }
-
-  .sm\:placeholder-ws-blue-300::-webkit-input-placeholder {
-    color: #99C3FF;
-  }
-
-  .sm\:placeholder-ws-blue-300::-moz-placeholder {
-    color: #99C3FF;
-  }
-
-  .sm\:placeholder-ws-blue-300:-ms-input-placeholder {
-    color: #99C3FF;
-  }
-
-  .sm\:placeholder-ws-blue-300::-ms-input-placeholder {
-    color: #99C3FF;
-  }
-
-  .sm\:placeholder-ws-blue-300::placeholder {
-    color: #99C3FF;
-  }
-
-  .sm\:placeholder-ws-blue-400::-webkit-input-placeholder {
-    color: #4D97FE;
-  }
-
-  .sm\:placeholder-ws-blue-400::-moz-placeholder {
-    color: #4D97FE;
-  }
-
-  .sm\:placeholder-ws-blue-400:-ms-input-placeholder {
-    color: #4D97FE;
-  }
-
-  .sm\:placeholder-ws-blue-400::-ms-input-placeholder {
-    color: #4D97FE;
-  }
-
-  .sm\:placeholder-ws-blue-400::placeholder {
-    color: #4D97FE;
-  }
-
-  .sm\:placeholder-ws-blue-500::-webkit-input-placeholder {
-    color: #006AFE;
-  }
-
-  .sm\:placeholder-ws-blue-500::-moz-placeholder {
-    color: #006AFE;
-  }
-
-  .sm\:placeholder-ws-blue-500:-ms-input-placeholder {
-    color: #006AFE;
-  }
-
-  .sm\:placeholder-ws-blue-500::-ms-input-placeholder {
-    color: #006AFE;
-  }
-
-  .sm\:placeholder-ws-blue-500::placeholder {
-    color: #006AFE;
-  }
-
-  .sm\:placeholder-ws-blue-600::-webkit-input-placeholder {
-    color: #005FE5;
-  }
-
-  .sm\:placeholder-ws-blue-600::-moz-placeholder {
-    color: #005FE5;
-  }
-
-  .sm\:placeholder-ws-blue-600:-ms-input-placeholder {
-    color: #005FE5;
-  }
-
-  .sm\:placeholder-ws-blue-600::-ms-input-placeholder {
-    color: #005FE5;
-  }
-
-  .sm\:placeholder-ws-blue-600::placeholder {
-    color: #005FE5;
-  }
-
-  .sm\:placeholder-ws-blue-700::-webkit-input-placeholder {
-    color: #004098;
-  }
-
-  .sm\:placeholder-ws-blue-700::-moz-placeholder {
-    color: #004098;
-  }
-
-  .sm\:placeholder-ws-blue-700:-ms-input-placeholder {
-    color: #004098;
-  }
-
-  .sm\:placeholder-ws-blue-700::-ms-input-placeholder {
-    color: #004098;
-  }
-
-  .sm\:placeholder-ws-blue-700::placeholder {
-    color: #004098;
-  }
-
-  .sm\:placeholder-ws-blue-800::-webkit-input-placeholder {
-    color: #003072;
-  }
-
-  .sm\:placeholder-ws-blue-800::-moz-placeholder {
-    color: #003072;
-  }
-
-  .sm\:placeholder-ws-blue-800:-ms-input-placeholder {
-    color: #003072;
-  }
-
-  .sm\:placeholder-ws-blue-800::-ms-input-placeholder {
-    color: #003072;
-  }
-
-  .sm\:placeholder-ws-blue-800::placeholder {
-    color: #003072;
-  }
-
-  .sm\:placeholder-ws-blue-900::-webkit-input-placeholder {
-    color: #00204C;
-  }
-
-  .sm\:placeholder-ws-blue-900::-moz-placeholder {
-    color: #00204C;
-  }
-
-  .sm\:placeholder-ws-blue-900:-ms-input-placeholder {
-    color: #00204C;
-  }
-
-  .sm\:placeholder-ws-blue-900::-ms-input-placeholder {
-    color: #00204C;
-  }
-
-  .sm\:placeholder-ws-blue-900::placeholder {
-    color: #00204C;
-  }
-
-  .sm\:placeholder-jet-black::-webkit-input-placeholder {
-    color: #080F5B;
-  }
-
-  .sm\:placeholder-jet-black::-moz-placeholder {
-    color: #080F5B;
-  }
-
-  .sm\:placeholder-jet-black:-ms-input-placeholder {
-    color: #080F5B;
-  }
-
-  .sm\:placeholder-jet-black::-ms-input-placeholder {
-    color: #080F5B;
-  }
-
-  .sm\:placeholder-jet-black::placeholder {
-    color: #080F5B;
-  }
-
-  .sm\:placeholder-jet-black-09::-webkit-input-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .sm\:placeholder-jet-black-09::-moz-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .sm\:placeholder-jet-black-09:-ms-input-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .sm\:placeholder-jet-black-09::-ms-input-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .sm\:placeholder-jet-black-09::placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
   .sm\:placeholder-mr-blue::-webkit-input-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .sm\:placeholder-mr-blue::-moz-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .sm\:placeholder-mr-blue:-ms-input-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .sm\:placeholder-mr-blue::-ms-input-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .sm\:placeholder-mr-blue::placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
-  .sm\:placeholder-mr-light-blue::-webkit-input-placeholder {
-    color: #3CC7D4;
+  .sm\:placeholder-mr-blue-09::-webkit-input-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .sm\:placeholder-mr-light-blue::-moz-placeholder {
-    color: #3CC7D4;
+  .sm\:placeholder-mr-blue-09::-moz-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .sm\:placeholder-mr-light-blue:-ms-input-placeholder {
-    color: #3CC7D4;
+  .sm\:placeholder-mr-blue-09:-ms-input-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .sm\:placeholder-mr-light-blue::-ms-input-placeholder {
-    color: #3CC7D4;
+  .sm\:placeholder-mr-blue-09::-ms-input-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .sm\:placeholder-mr-light-blue::placeholder {
-    color: #3CC7D4;
+  .sm\:placeholder-mr-blue-09::placeholder {
+    color: rgba(13,25,163, .9);
   }
 
   .sm\:placeholder-mr-lime::-webkit-input-placeholder {
@@ -25488,264 +24168,44 @@ footer {
     color: #702459;
   }
 
-  .sm\:focus\:placeholder-ws-blue-100:focus::-webkit-input-placeholder {
-    color: #E6F0FF;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-100:focus::-moz-placeholder {
-    color: #E6F0FF;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-100:focus:-ms-input-placeholder {
-    color: #E6F0FF;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-100:focus::-ms-input-placeholder {
-    color: #E6F0FF;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-100:focus::placeholder {
-    color: #E6F0FF;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-200:focus::-webkit-input-placeholder {
-    color: #BFDAFF;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-200:focus::-moz-placeholder {
-    color: #BFDAFF;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-200:focus:-ms-input-placeholder {
-    color: #BFDAFF;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-200:focus::-ms-input-placeholder {
-    color: #BFDAFF;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-200:focus::placeholder {
-    color: #BFDAFF;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-300:focus::-webkit-input-placeholder {
-    color: #99C3FF;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-300:focus::-moz-placeholder {
-    color: #99C3FF;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-300:focus:-ms-input-placeholder {
-    color: #99C3FF;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-300:focus::-ms-input-placeholder {
-    color: #99C3FF;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-300:focus::placeholder {
-    color: #99C3FF;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-400:focus::-webkit-input-placeholder {
-    color: #4D97FE;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-400:focus::-moz-placeholder {
-    color: #4D97FE;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-400:focus:-ms-input-placeholder {
-    color: #4D97FE;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-400:focus::-ms-input-placeholder {
-    color: #4D97FE;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-400:focus::placeholder {
-    color: #4D97FE;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-500:focus::-webkit-input-placeholder {
-    color: #006AFE;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-500:focus::-moz-placeholder {
-    color: #006AFE;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-500:focus:-ms-input-placeholder {
-    color: #006AFE;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-500:focus::-ms-input-placeholder {
-    color: #006AFE;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-500:focus::placeholder {
-    color: #006AFE;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-600:focus::-webkit-input-placeholder {
-    color: #005FE5;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-600:focus::-moz-placeholder {
-    color: #005FE5;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-600:focus:-ms-input-placeholder {
-    color: #005FE5;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-600:focus::-ms-input-placeholder {
-    color: #005FE5;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-600:focus::placeholder {
-    color: #005FE5;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-700:focus::-webkit-input-placeholder {
-    color: #004098;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-700:focus::-moz-placeholder {
-    color: #004098;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-700:focus:-ms-input-placeholder {
-    color: #004098;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-700:focus::-ms-input-placeholder {
-    color: #004098;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-700:focus::placeholder {
-    color: #004098;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-800:focus::-webkit-input-placeholder {
-    color: #003072;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-800:focus::-moz-placeholder {
-    color: #003072;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-800:focus:-ms-input-placeholder {
-    color: #003072;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-800:focus::-ms-input-placeholder {
-    color: #003072;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-800:focus::placeholder {
-    color: #003072;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-900:focus::-webkit-input-placeholder {
-    color: #00204C;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-900:focus::-moz-placeholder {
-    color: #00204C;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-900:focus:-ms-input-placeholder {
-    color: #00204C;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-900:focus::-ms-input-placeholder {
-    color: #00204C;
-  }
-
-  .sm\:focus\:placeholder-ws-blue-900:focus::placeholder {
-    color: #00204C;
-  }
-
-  .sm\:focus\:placeholder-jet-black:focus::-webkit-input-placeholder {
-    color: #080F5B;
-  }
-
-  .sm\:focus\:placeholder-jet-black:focus::-moz-placeholder {
-    color: #080F5B;
-  }
-
-  .sm\:focus\:placeholder-jet-black:focus:-ms-input-placeholder {
-    color: #080F5B;
-  }
-
-  .sm\:focus\:placeholder-jet-black:focus::-ms-input-placeholder {
-    color: #080F5B;
-  }
-
-  .sm\:focus\:placeholder-jet-black:focus::placeholder {
-    color: #080F5B;
-  }
-
-  .sm\:focus\:placeholder-jet-black-09:focus::-webkit-input-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .sm\:focus\:placeholder-jet-black-09:focus::-moz-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .sm\:focus\:placeholder-jet-black-09:focus:-ms-input-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .sm\:focus\:placeholder-jet-black-09:focus::-ms-input-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .sm\:focus\:placeholder-jet-black-09:focus::placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
   .sm\:focus\:placeholder-mr-blue:focus::-webkit-input-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .sm\:focus\:placeholder-mr-blue:focus::-moz-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .sm\:focus\:placeholder-mr-blue:focus:-ms-input-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .sm\:focus\:placeholder-mr-blue:focus::-ms-input-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .sm\:focus\:placeholder-mr-blue:focus::placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
-  .sm\:focus\:placeholder-mr-light-blue:focus::-webkit-input-placeholder {
-    color: #3CC7D4;
+  .sm\:focus\:placeholder-mr-blue-09:focus::-webkit-input-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .sm\:focus\:placeholder-mr-light-blue:focus::-moz-placeholder {
-    color: #3CC7D4;
+  .sm\:focus\:placeholder-mr-blue-09:focus::-moz-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .sm\:focus\:placeholder-mr-light-blue:focus:-ms-input-placeholder {
-    color: #3CC7D4;
+  .sm\:focus\:placeholder-mr-blue-09:focus:-ms-input-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .sm\:focus\:placeholder-mr-light-blue:focus::-ms-input-placeholder {
-    color: #3CC7D4;
+  .sm\:focus\:placeholder-mr-blue-09:focus::-ms-input-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .sm\:focus\:placeholder-mr-light-blue:focus::placeholder {
-    color: #3CC7D4;
+  .sm\:focus\:placeholder-mr-blue-09:focus::placeholder {
+    color: rgba(13,25,163, .9);
   }
 
   .sm\:focus\:placeholder-mr-lime:focus::-webkit-input-placeholder {
@@ -26495,56 +24955,12 @@ footer {
     color: #702459;
   }
 
-  .sm\:text-ws-blue-100 {
-    color: #E6F0FF;
-  }
-
-  .sm\:text-ws-blue-200 {
-    color: #BFDAFF;
-  }
-
-  .sm\:text-ws-blue-300 {
-    color: #99C3FF;
-  }
-
-  .sm\:text-ws-blue-400 {
-    color: #4D97FE;
-  }
-
-  .sm\:text-ws-blue-500 {
-    color: #006AFE;
-  }
-
-  .sm\:text-ws-blue-600 {
-    color: #005FE5;
-  }
-
-  .sm\:text-ws-blue-700 {
-    color: #004098;
-  }
-
-  .sm\:text-ws-blue-800 {
-    color: #003072;
-  }
-
-  .sm\:text-ws-blue-900 {
-    color: #00204C;
-  }
-
-  .sm\:text-jet-black {
+  .sm\:text-mr-blue {
     color: #080F5B;
   }
 
-  .sm\:text-jet-black-09 {
+  .sm\:text-mr-blue-09 {
     color: rgba(13,25,163, .9);
-  }
-
-  .sm\:text-mr-blue {
-    color: #0D19A3;
-  }
-
-  .sm\:text-mr-light-blue {
-    color: #3CC7D4;
   }
 
   .sm\:text-mr-lime {
@@ -26939,56 +25355,12 @@ footer {
     color: #702459;
   }
 
-  .sm\:hover\:text-ws-blue-100:hover {
-    color: #E6F0FF;
-  }
-
-  .sm\:hover\:text-ws-blue-200:hover {
-    color: #BFDAFF;
-  }
-
-  .sm\:hover\:text-ws-blue-300:hover {
-    color: #99C3FF;
-  }
-
-  .sm\:hover\:text-ws-blue-400:hover {
-    color: #4D97FE;
-  }
-
-  .sm\:hover\:text-ws-blue-500:hover {
-    color: #006AFE;
-  }
-
-  .sm\:hover\:text-ws-blue-600:hover {
-    color: #005FE5;
-  }
-
-  .sm\:hover\:text-ws-blue-700:hover {
-    color: #004098;
-  }
-
-  .sm\:hover\:text-ws-blue-800:hover {
-    color: #003072;
-  }
-
-  .sm\:hover\:text-ws-blue-900:hover {
-    color: #00204C;
-  }
-
-  .sm\:hover\:text-jet-black:hover {
+  .sm\:hover\:text-mr-blue:hover {
     color: #080F5B;
   }
 
-  .sm\:hover\:text-jet-black-09:hover {
+  .sm\:hover\:text-mr-blue-09:hover {
     color: rgba(13,25,163, .9);
-  }
-
-  .sm\:hover\:text-mr-blue:hover {
-    color: #0D19A3;
-  }
-
-  .sm\:hover\:text-mr-light-blue:hover {
-    color: #3CC7D4;
   }
 
   .sm\:hover\:text-mr-lime:hover {
@@ -27383,56 +25755,12 @@ footer {
     color: #702459;
   }
 
-  .sm\:focus\:text-ws-blue-100:focus {
-    color: #E6F0FF;
-  }
-
-  .sm\:focus\:text-ws-blue-200:focus {
-    color: #BFDAFF;
-  }
-
-  .sm\:focus\:text-ws-blue-300:focus {
-    color: #99C3FF;
-  }
-
-  .sm\:focus\:text-ws-blue-400:focus {
-    color: #4D97FE;
-  }
-
-  .sm\:focus\:text-ws-blue-500:focus {
-    color: #006AFE;
-  }
-
-  .sm\:focus\:text-ws-blue-600:focus {
-    color: #005FE5;
-  }
-
-  .sm\:focus\:text-ws-blue-700:focus {
-    color: #004098;
-  }
-
-  .sm\:focus\:text-ws-blue-800:focus {
-    color: #003072;
-  }
-
-  .sm\:focus\:text-ws-blue-900:focus {
-    color: #00204C;
-  }
-
-  .sm\:focus\:text-jet-black:focus {
+  .sm\:focus\:text-mr-blue:focus {
     color: #080F5B;
   }
 
-  .sm\:focus\:text-jet-black-09:focus {
+  .sm\:focus\:text-mr-blue-09:focus {
     color: rgba(13,25,163, .9);
-  }
-
-  .sm\:focus\:text-mr-blue:focus {
-    color: #0D19A3;
-  }
-
-  .sm\:focus\:text-mr-light-blue:focus {
-    color: #3CC7D4;
   }
 
   .sm\:focus\:text-mr-lime:focus {
@@ -30755,56 +29083,12 @@ footer {
     background-color: #702459;
   }
 
-  .md\:bg-ws-blue-100 {
-    background-color: #E6F0FF;
-  }
-
-  .md\:bg-ws-blue-200 {
-    background-color: #BFDAFF;
-  }
-
-  .md\:bg-ws-blue-300 {
-    background-color: #99C3FF;
-  }
-
-  .md\:bg-ws-blue-400 {
-    background-color: #4D97FE;
-  }
-
-  .md\:bg-ws-blue-500 {
-    background-color: #006AFE;
-  }
-
-  .md\:bg-ws-blue-600 {
-    background-color: #005FE5;
-  }
-
-  .md\:bg-ws-blue-700 {
-    background-color: #004098;
-  }
-
-  .md\:bg-ws-blue-800 {
-    background-color: #003072;
-  }
-
-  .md\:bg-ws-blue-900 {
-    background-color: #00204C;
-  }
-
-  .md\:bg-jet-black {
+  .md\:bg-mr-blue {
     background-color: #080F5B;
   }
 
-  .md\:bg-jet-black-09 {
+  .md\:bg-mr-blue-09 {
     background-color: rgba(13,25,163, .9);
-  }
-
-  .md\:bg-mr-blue {
-    background-color: #0D19A3;
-  }
-
-  .md\:bg-mr-light-blue {
-    background-color: #3CC7D4;
   }
 
   .md\:bg-mr-lime {
@@ -31199,56 +29483,12 @@ footer {
     background-color: #702459;
   }
 
-  .md\:hover\:bg-ws-blue-100:hover {
-    background-color: #E6F0FF;
-  }
-
-  .md\:hover\:bg-ws-blue-200:hover {
-    background-color: #BFDAFF;
-  }
-
-  .md\:hover\:bg-ws-blue-300:hover {
-    background-color: #99C3FF;
-  }
-
-  .md\:hover\:bg-ws-blue-400:hover {
-    background-color: #4D97FE;
-  }
-
-  .md\:hover\:bg-ws-blue-500:hover {
-    background-color: #006AFE;
-  }
-
-  .md\:hover\:bg-ws-blue-600:hover {
-    background-color: #005FE5;
-  }
-
-  .md\:hover\:bg-ws-blue-700:hover {
-    background-color: #004098;
-  }
-
-  .md\:hover\:bg-ws-blue-800:hover {
-    background-color: #003072;
-  }
-
-  .md\:hover\:bg-ws-blue-900:hover {
-    background-color: #00204C;
-  }
-
-  .md\:hover\:bg-jet-black:hover {
+  .md\:hover\:bg-mr-blue:hover {
     background-color: #080F5B;
   }
 
-  .md\:hover\:bg-jet-black-09:hover {
+  .md\:hover\:bg-mr-blue-09:hover {
     background-color: rgba(13,25,163, .9);
-  }
-
-  .md\:hover\:bg-mr-blue:hover {
-    background-color: #0D19A3;
-  }
-
-  .md\:hover\:bg-mr-light-blue:hover {
-    background-color: #3CC7D4;
   }
 
   .md\:hover\:bg-mr-lime:hover {
@@ -31643,56 +29883,12 @@ footer {
     background-color: #702459;
   }
 
-  .md\:focus\:bg-ws-blue-100:focus {
-    background-color: #E6F0FF;
-  }
-
-  .md\:focus\:bg-ws-blue-200:focus {
-    background-color: #BFDAFF;
-  }
-
-  .md\:focus\:bg-ws-blue-300:focus {
-    background-color: #99C3FF;
-  }
-
-  .md\:focus\:bg-ws-blue-400:focus {
-    background-color: #4D97FE;
-  }
-
-  .md\:focus\:bg-ws-blue-500:focus {
-    background-color: #006AFE;
-  }
-
-  .md\:focus\:bg-ws-blue-600:focus {
-    background-color: #005FE5;
-  }
-
-  .md\:focus\:bg-ws-blue-700:focus {
-    background-color: #004098;
-  }
-
-  .md\:focus\:bg-ws-blue-800:focus {
-    background-color: #003072;
-  }
-
-  .md\:focus\:bg-ws-blue-900:focus {
-    background-color: #00204C;
-  }
-
-  .md\:focus\:bg-jet-black:focus {
+  .md\:focus\:bg-mr-blue:focus {
     background-color: #080F5B;
   }
 
-  .md\:focus\:bg-jet-black-09:focus {
+  .md\:focus\:bg-mr-blue-09:focus {
     background-color: rgba(13,25,163, .9);
-  }
-
-  .md\:focus\:bg-mr-blue:focus {
-    background-color: #0D19A3;
-  }
-
-  .md\:focus\:bg-mr-light-blue:focus {
-    background-color: #3CC7D4;
   }
 
   .md\:focus\:bg-mr-lime:focus {
@@ -32167,56 +30363,12 @@ footer {
     border-color: #702459;
   }
 
-  .md\:border-ws-blue-100 {
-    border-color: #E6F0FF;
-  }
-
-  .md\:border-ws-blue-200 {
-    border-color: #BFDAFF;
-  }
-
-  .md\:border-ws-blue-300 {
-    border-color: #99C3FF;
-  }
-
-  .md\:border-ws-blue-400 {
-    border-color: #4D97FE;
-  }
-
-  .md\:border-ws-blue-500 {
-    border-color: #006AFE;
-  }
-
-  .md\:border-ws-blue-600 {
-    border-color: #005FE5;
-  }
-
-  .md\:border-ws-blue-700 {
-    border-color: #004098;
-  }
-
-  .md\:border-ws-blue-800 {
-    border-color: #003072;
-  }
-
-  .md\:border-ws-blue-900 {
-    border-color: #00204C;
-  }
-
-  .md\:border-jet-black {
+  .md\:border-mr-blue {
     border-color: #080F5B;
   }
 
-  .md\:border-jet-black-09 {
+  .md\:border-mr-blue-09 {
     border-color: rgba(13,25,163, .9);
-  }
-
-  .md\:border-mr-blue {
-    border-color: #0D19A3;
-  }
-
-  .md\:border-mr-light-blue {
-    border-color: #3CC7D4;
   }
 
   .md\:border-mr-lime {
@@ -32611,56 +30763,12 @@ footer {
     border-color: #702459;
   }
 
-  .md\:hover\:border-ws-blue-100:hover {
-    border-color: #E6F0FF;
-  }
-
-  .md\:hover\:border-ws-blue-200:hover {
-    border-color: #BFDAFF;
-  }
-
-  .md\:hover\:border-ws-blue-300:hover {
-    border-color: #99C3FF;
-  }
-
-  .md\:hover\:border-ws-blue-400:hover {
-    border-color: #4D97FE;
-  }
-
-  .md\:hover\:border-ws-blue-500:hover {
-    border-color: #006AFE;
-  }
-
-  .md\:hover\:border-ws-blue-600:hover {
-    border-color: #005FE5;
-  }
-
-  .md\:hover\:border-ws-blue-700:hover {
-    border-color: #004098;
-  }
-
-  .md\:hover\:border-ws-blue-800:hover {
-    border-color: #003072;
-  }
-
-  .md\:hover\:border-ws-blue-900:hover {
-    border-color: #00204C;
-  }
-
-  .md\:hover\:border-jet-black:hover {
+  .md\:hover\:border-mr-blue:hover {
     border-color: #080F5B;
   }
 
-  .md\:hover\:border-jet-black-09:hover {
+  .md\:hover\:border-mr-blue-09:hover {
     border-color: rgba(13,25,163, .9);
-  }
-
-  .md\:hover\:border-mr-blue:hover {
-    border-color: #0D19A3;
-  }
-
-  .md\:hover\:border-mr-light-blue:hover {
-    border-color: #3CC7D4;
   }
 
   .md\:hover\:border-mr-lime:hover {
@@ -33055,56 +31163,12 @@ footer {
     border-color: #702459;
   }
 
-  .md\:focus\:border-ws-blue-100:focus {
-    border-color: #E6F0FF;
-  }
-
-  .md\:focus\:border-ws-blue-200:focus {
-    border-color: #BFDAFF;
-  }
-
-  .md\:focus\:border-ws-blue-300:focus {
-    border-color: #99C3FF;
-  }
-
-  .md\:focus\:border-ws-blue-400:focus {
-    border-color: #4D97FE;
-  }
-
-  .md\:focus\:border-ws-blue-500:focus {
-    border-color: #006AFE;
-  }
-
-  .md\:focus\:border-ws-blue-600:focus {
-    border-color: #005FE5;
-  }
-
-  .md\:focus\:border-ws-blue-700:focus {
-    border-color: #004098;
-  }
-
-  .md\:focus\:border-ws-blue-800:focus {
-    border-color: #003072;
-  }
-
-  .md\:focus\:border-ws-blue-900:focus {
-    border-color: #00204C;
-  }
-
-  .md\:focus\:border-jet-black:focus {
+  .md\:focus\:border-mr-blue:focus {
     border-color: #080F5B;
   }
 
-  .md\:focus\:border-jet-black-09:focus {
+  .md\:focus\:border-mr-blue-09:focus {
     border-color: rgba(13,25,163, .9);
-  }
-
-  .md\:focus\:border-mr-blue:focus {
-    border-color: #0D19A3;
-  }
-
-  .md\:focus\:border-mr-light-blue:focus {
-    border-color: #3CC7D4;
   }
 
   .md\:focus\:border-mr-lime:focus {
@@ -37961,264 +36025,44 @@ footer {
     color: #702459;
   }
 
-  .md\:placeholder-ws-blue-100::-webkit-input-placeholder {
-    color: #E6F0FF;
-  }
-
-  .md\:placeholder-ws-blue-100::-moz-placeholder {
-    color: #E6F0FF;
-  }
-
-  .md\:placeholder-ws-blue-100:-ms-input-placeholder {
-    color: #E6F0FF;
-  }
-
-  .md\:placeholder-ws-blue-100::-ms-input-placeholder {
-    color: #E6F0FF;
-  }
-
-  .md\:placeholder-ws-blue-100::placeholder {
-    color: #E6F0FF;
-  }
-
-  .md\:placeholder-ws-blue-200::-webkit-input-placeholder {
-    color: #BFDAFF;
-  }
-
-  .md\:placeholder-ws-blue-200::-moz-placeholder {
-    color: #BFDAFF;
-  }
-
-  .md\:placeholder-ws-blue-200:-ms-input-placeholder {
-    color: #BFDAFF;
-  }
-
-  .md\:placeholder-ws-blue-200::-ms-input-placeholder {
-    color: #BFDAFF;
-  }
-
-  .md\:placeholder-ws-blue-200::placeholder {
-    color: #BFDAFF;
-  }
-
-  .md\:placeholder-ws-blue-300::-webkit-input-placeholder {
-    color: #99C3FF;
-  }
-
-  .md\:placeholder-ws-blue-300::-moz-placeholder {
-    color: #99C3FF;
-  }
-
-  .md\:placeholder-ws-blue-300:-ms-input-placeholder {
-    color: #99C3FF;
-  }
-
-  .md\:placeholder-ws-blue-300::-ms-input-placeholder {
-    color: #99C3FF;
-  }
-
-  .md\:placeholder-ws-blue-300::placeholder {
-    color: #99C3FF;
-  }
-
-  .md\:placeholder-ws-blue-400::-webkit-input-placeholder {
-    color: #4D97FE;
-  }
-
-  .md\:placeholder-ws-blue-400::-moz-placeholder {
-    color: #4D97FE;
-  }
-
-  .md\:placeholder-ws-blue-400:-ms-input-placeholder {
-    color: #4D97FE;
-  }
-
-  .md\:placeholder-ws-blue-400::-ms-input-placeholder {
-    color: #4D97FE;
-  }
-
-  .md\:placeholder-ws-blue-400::placeholder {
-    color: #4D97FE;
-  }
-
-  .md\:placeholder-ws-blue-500::-webkit-input-placeholder {
-    color: #006AFE;
-  }
-
-  .md\:placeholder-ws-blue-500::-moz-placeholder {
-    color: #006AFE;
-  }
-
-  .md\:placeholder-ws-blue-500:-ms-input-placeholder {
-    color: #006AFE;
-  }
-
-  .md\:placeholder-ws-blue-500::-ms-input-placeholder {
-    color: #006AFE;
-  }
-
-  .md\:placeholder-ws-blue-500::placeholder {
-    color: #006AFE;
-  }
-
-  .md\:placeholder-ws-blue-600::-webkit-input-placeholder {
-    color: #005FE5;
-  }
-
-  .md\:placeholder-ws-blue-600::-moz-placeholder {
-    color: #005FE5;
-  }
-
-  .md\:placeholder-ws-blue-600:-ms-input-placeholder {
-    color: #005FE5;
-  }
-
-  .md\:placeholder-ws-blue-600::-ms-input-placeholder {
-    color: #005FE5;
-  }
-
-  .md\:placeholder-ws-blue-600::placeholder {
-    color: #005FE5;
-  }
-
-  .md\:placeholder-ws-blue-700::-webkit-input-placeholder {
-    color: #004098;
-  }
-
-  .md\:placeholder-ws-blue-700::-moz-placeholder {
-    color: #004098;
-  }
-
-  .md\:placeholder-ws-blue-700:-ms-input-placeholder {
-    color: #004098;
-  }
-
-  .md\:placeholder-ws-blue-700::-ms-input-placeholder {
-    color: #004098;
-  }
-
-  .md\:placeholder-ws-blue-700::placeholder {
-    color: #004098;
-  }
-
-  .md\:placeholder-ws-blue-800::-webkit-input-placeholder {
-    color: #003072;
-  }
-
-  .md\:placeholder-ws-blue-800::-moz-placeholder {
-    color: #003072;
-  }
-
-  .md\:placeholder-ws-blue-800:-ms-input-placeholder {
-    color: #003072;
-  }
-
-  .md\:placeholder-ws-blue-800::-ms-input-placeholder {
-    color: #003072;
-  }
-
-  .md\:placeholder-ws-blue-800::placeholder {
-    color: #003072;
-  }
-
-  .md\:placeholder-ws-blue-900::-webkit-input-placeholder {
-    color: #00204C;
-  }
-
-  .md\:placeholder-ws-blue-900::-moz-placeholder {
-    color: #00204C;
-  }
-
-  .md\:placeholder-ws-blue-900:-ms-input-placeholder {
-    color: #00204C;
-  }
-
-  .md\:placeholder-ws-blue-900::-ms-input-placeholder {
-    color: #00204C;
-  }
-
-  .md\:placeholder-ws-blue-900::placeholder {
-    color: #00204C;
-  }
-
-  .md\:placeholder-jet-black::-webkit-input-placeholder {
-    color: #080F5B;
-  }
-
-  .md\:placeholder-jet-black::-moz-placeholder {
-    color: #080F5B;
-  }
-
-  .md\:placeholder-jet-black:-ms-input-placeholder {
-    color: #080F5B;
-  }
-
-  .md\:placeholder-jet-black::-ms-input-placeholder {
-    color: #080F5B;
-  }
-
-  .md\:placeholder-jet-black::placeholder {
-    color: #080F5B;
-  }
-
-  .md\:placeholder-jet-black-09::-webkit-input-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .md\:placeholder-jet-black-09::-moz-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .md\:placeholder-jet-black-09:-ms-input-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .md\:placeholder-jet-black-09::-ms-input-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .md\:placeholder-jet-black-09::placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
   .md\:placeholder-mr-blue::-webkit-input-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .md\:placeholder-mr-blue::-moz-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .md\:placeholder-mr-blue:-ms-input-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .md\:placeholder-mr-blue::-ms-input-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .md\:placeholder-mr-blue::placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
-  .md\:placeholder-mr-light-blue::-webkit-input-placeholder {
-    color: #3CC7D4;
+  .md\:placeholder-mr-blue-09::-webkit-input-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .md\:placeholder-mr-light-blue::-moz-placeholder {
-    color: #3CC7D4;
+  .md\:placeholder-mr-blue-09::-moz-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .md\:placeholder-mr-light-blue:-ms-input-placeholder {
-    color: #3CC7D4;
+  .md\:placeholder-mr-blue-09:-ms-input-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .md\:placeholder-mr-light-blue::-ms-input-placeholder {
-    color: #3CC7D4;
+  .md\:placeholder-mr-blue-09::-ms-input-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .md\:placeholder-mr-light-blue::placeholder {
-    color: #3CC7D4;
+  .md\:placeholder-mr-blue-09::placeholder {
+    color: rgba(13,25,163, .9);
   }
 
   .md\:placeholder-mr-lime::-webkit-input-placeholder {
@@ -40181,264 +38025,44 @@ footer {
     color: #702459;
   }
 
-  .md\:focus\:placeholder-ws-blue-100:focus::-webkit-input-placeholder {
-    color: #E6F0FF;
-  }
-
-  .md\:focus\:placeholder-ws-blue-100:focus::-moz-placeholder {
-    color: #E6F0FF;
-  }
-
-  .md\:focus\:placeholder-ws-blue-100:focus:-ms-input-placeholder {
-    color: #E6F0FF;
-  }
-
-  .md\:focus\:placeholder-ws-blue-100:focus::-ms-input-placeholder {
-    color: #E6F0FF;
-  }
-
-  .md\:focus\:placeholder-ws-blue-100:focus::placeholder {
-    color: #E6F0FF;
-  }
-
-  .md\:focus\:placeholder-ws-blue-200:focus::-webkit-input-placeholder {
-    color: #BFDAFF;
-  }
-
-  .md\:focus\:placeholder-ws-blue-200:focus::-moz-placeholder {
-    color: #BFDAFF;
-  }
-
-  .md\:focus\:placeholder-ws-blue-200:focus:-ms-input-placeholder {
-    color: #BFDAFF;
-  }
-
-  .md\:focus\:placeholder-ws-blue-200:focus::-ms-input-placeholder {
-    color: #BFDAFF;
-  }
-
-  .md\:focus\:placeholder-ws-blue-200:focus::placeholder {
-    color: #BFDAFF;
-  }
-
-  .md\:focus\:placeholder-ws-blue-300:focus::-webkit-input-placeholder {
-    color: #99C3FF;
-  }
-
-  .md\:focus\:placeholder-ws-blue-300:focus::-moz-placeholder {
-    color: #99C3FF;
-  }
-
-  .md\:focus\:placeholder-ws-blue-300:focus:-ms-input-placeholder {
-    color: #99C3FF;
-  }
-
-  .md\:focus\:placeholder-ws-blue-300:focus::-ms-input-placeholder {
-    color: #99C3FF;
-  }
-
-  .md\:focus\:placeholder-ws-blue-300:focus::placeholder {
-    color: #99C3FF;
-  }
-
-  .md\:focus\:placeholder-ws-blue-400:focus::-webkit-input-placeholder {
-    color: #4D97FE;
-  }
-
-  .md\:focus\:placeholder-ws-blue-400:focus::-moz-placeholder {
-    color: #4D97FE;
-  }
-
-  .md\:focus\:placeholder-ws-blue-400:focus:-ms-input-placeholder {
-    color: #4D97FE;
-  }
-
-  .md\:focus\:placeholder-ws-blue-400:focus::-ms-input-placeholder {
-    color: #4D97FE;
-  }
-
-  .md\:focus\:placeholder-ws-blue-400:focus::placeholder {
-    color: #4D97FE;
-  }
-
-  .md\:focus\:placeholder-ws-blue-500:focus::-webkit-input-placeholder {
-    color: #006AFE;
-  }
-
-  .md\:focus\:placeholder-ws-blue-500:focus::-moz-placeholder {
-    color: #006AFE;
-  }
-
-  .md\:focus\:placeholder-ws-blue-500:focus:-ms-input-placeholder {
-    color: #006AFE;
-  }
-
-  .md\:focus\:placeholder-ws-blue-500:focus::-ms-input-placeholder {
-    color: #006AFE;
-  }
-
-  .md\:focus\:placeholder-ws-blue-500:focus::placeholder {
-    color: #006AFE;
-  }
-
-  .md\:focus\:placeholder-ws-blue-600:focus::-webkit-input-placeholder {
-    color: #005FE5;
-  }
-
-  .md\:focus\:placeholder-ws-blue-600:focus::-moz-placeholder {
-    color: #005FE5;
-  }
-
-  .md\:focus\:placeholder-ws-blue-600:focus:-ms-input-placeholder {
-    color: #005FE5;
-  }
-
-  .md\:focus\:placeholder-ws-blue-600:focus::-ms-input-placeholder {
-    color: #005FE5;
-  }
-
-  .md\:focus\:placeholder-ws-blue-600:focus::placeholder {
-    color: #005FE5;
-  }
-
-  .md\:focus\:placeholder-ws-blue-700:focus::-webkit-input-placeholder {
-    color: #004098;
-  }
-
-  .md\:focus\:placeholder-ws-blue-700:focus::-moz-placeholder {
-    color: #004098;
-  }
-
-  .md\:focus\:placeholder-ws-blue-700:focus:-ms-input-placeholder {
-    color: #004098;
-  }
-
-  .md\:focus\:placeholder-ws-blue-700:focus::-ms-input-placeholder {
-    color: #004098;
-  }
-
-  .md\:focus\:placeholder-ws-blue-700:focus::placeholder {
-    color: #004098;
-  }
-
-  .md\:focus\:placeholder-ws-blue-800:focus::-webkit-input-placeholder {
-    color: #003072;
-  }
-
-  .md\:focus\:placeholder-ws-blue-800:focus::-moz-placeholder {
-    color: #003072;
-  }
-
-  .md\:focus\:placeholder-ws-blue-800:focus:-ms-input-placeholder {
-    color: #003072;
-  }
-
-  .md\:focus\:placeholder-ws-blue-800:focus::-ms-input-placeholder {
-    color: #003072;
-  }
-
-  .md\:focus\:placeholder-ws-blue-800:focus::placeholder {
-    color: #003072;
-  }
-
-  .md\:focus\:placeholder-ws-blue-900:focus::-webkit-input-placeholder {
-    color: #00204C;
-  }
-
-  .md\:focus\:placeholder-ws-blue-900:focus::-moz-placeholder {
-    color: #00204C;
-  }
-
-  .md\:focus\:placeholder-ws-blue-900:focus:-ms-input-placeholder {
-    color: #00204C;
-  }
-
-  .md\:focus\:placeholder-ws-blue-900:focus::-ms-input-placeholder {
-    color: #00204C;
-  }
-
-  .md\:focus\:placeholder-ws-blue-900:focus::placeholder {
-    color: #00204C;
-  }
-
-  .md\:focus\:placeholder-jet-black:focus::-webkit-input-placeholder {
-    color: #080F5B;
-  }
-
-  .md\:focus\:placeholder-jet-black:focus::-moz-placeholder {
-    color: #080F5B;
-  }
-
-  .md\:focus\:placeholder-jet-black:focus:-ms-input-placeholder {
-    color: #080F5B;
-  }
-
-  .md\:focus\:placeholder-jet-black:focus::-ms-input-placeholder {
-    color: #080F5B;
-  }
-
-  .md\:focus\:placeholder-jet-black:focus::placeholder {
-    color: #080F5B;
-  }
-
-  .md\:focus\:placeholder-jet-black-09:focus::-webkit-input-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .md\:focus\:placeholder-jet-black-09:focus::-moz-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .md\:focus\:placeholder-jet-black-09:focus:-ms-input-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .md\:focus\:placeholder-jet-black-09:focus::-ms-input-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .md\:focus\:placeholder-jet-black-09:focus::placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
   .md\:focus\:placeholder-mr-blue:focus::-webkit-input-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .md\:focus\:placeholder-mr-blue:focus::-moz-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .md\:focus\:placeholder-mr-blue:focus:-ms-input-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .md\:focus\:placeholder-mr-blue:focus::-ms-input-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .md\:focus\:placeholder-mr-blue:focus::placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
-  .md\:focus\:placeholder-mr-light-blue:focus::-webkit-input-placeholder {
-    color: #3CC7D4;
+  .md\:focus\:placeholder-mr-blue-09:focus::-webkit-input-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .md\:focus\:placeholder-mr-light-blue:focus::-moz-placeholder {
-    color: #3CC7D4;
+  .md\:focus\:placeholder-mr-blue-09:focus::-moz-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .md\:focus\:placeholder-mr-light-blue:focus:-ms-input-placeholder {
-    color: #3CC7D4;
+  .md\:focus\:placeholder-mr-blue-09:focus:-ms-input-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .md\:focus\:placeholder-mr-light-blue:focus::-ms-input-placeholder {
-    color: #3CC7D4;
+  .md\:focus\:placeholder-mr-blue-09:focus::-ms-input-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .md\:focus\:placeholder-mr-light-blue:focus::placeholder {
-    color: #3CC7D4;
+  .md\:focus\:placeholder-mr-blue-09:focus::placeholder {
+    color: rgba(13,25,163, .9);
   }
 
   .md\:focus\:placeholder-mr-lime:focus::-webkit-input-placeholder {
@@ -41188,56 +38812,12 @@ footer {
     color: #702459;
   }
 
-  .md\:text-ws-blue-100 {
-    color: #E6F0FF;
-  }
-
-  .md\:text-ws-blue-200 {
-    color: #BFDAFF;
-  }
-
-  .md\:text-ws-blue-300 {
-    color: #99C3FF;
-  }
-
-  .md\:text-ws-blue-400 {
-    color: #4D97FE;
-  }
-
-  .md\:text-ws-blue-500 {
-    color: #006AFE;
-  }
-
-  .md\:text-ws-blue-600 {
-    color: #005FE5;
-  }
-
-  .md\:text-ws-blue-700 {
-    color: #004098;
-  }
-
-  .md\:text-ws-blue-800 {
-    color: #003072;
-  }
-
-  .md\:text-ws-blue-900 {
-    color: #00204C;
-  }
-
-  .md\:text-jet-black {
+  .md\:text-mr-blue {
     color: #080F5B;
   }
 
-  .md\:text-jet-black-09 {
+  .md\:text-mr-blue-09 {
     color: rgba(13,25,163, .9);
-  }
-
-  .md\:text-mr-blue {
-    color: #0D19A3;
-  }
-
-  .md\:text-mr-light-blue {
-    color: #3CC7D4;
   }
 
   .md\:text-mr-lime {
@@ -41632,56 +39212,12 @@ footer {
     color: #702459;
   }
 
-  .md\:hover\:text-ws-blue-100:hover {
-    color: #E6F0FF;
-  }
-
-  .md\:hover\:text-ws-blue-200:hover {
-    color: #BFDAFF;
-  }
-
-  .md\:hover\:text-ws-blue-300:hover {
-    color: #99C3FF;
-  }
-
-  .md\:hover\:text-ws-blue-400:hover {
-    color: #4D97FE;
-  }
-
-  .md\:hover\:text-ws-blue-500:hover {
-    color: #006AFE;
-  }
-
-  .md\:hover\:text-ws-blue-600:hover {
-    color: #005FE5;
-  }
-
-  .md\:hover\:text-ws-blue-700:hover {
-    color: #004098;
-  }
-
-  .md\:hover\:text-ws-blue-800:hover {
-    color: #003072;
-  }
-
-  .md\:hover\:text-ws-blue-900:hover {
-    color: #00204C;
-  }
-
-  .md\:hover\:text-jet-black:hover {
+  .md\:hover\:text-mr-blue:hover {
     color: #080F5B;
   }
 
-  .md\:hover\:text-jet-black-09:hover {
+  .md\:hover\:text-mr-blue-09:hover {
     color: rgba(13,25,163, .9);
-  }
-
-  .md\:hover\:text-mr-blue:hover {
-    color: #0D19A3;
-  }
-
-  .md\:hover\:text-mr-light-blue:hover {
-    color: #3CC7D4;
   }
 
   .md\:hover\:text-mr-lime:hover {
@@ -42076,56 +39612,12 @@ footer {
     color: #702459;
   }
 
-  .md\:focus\:text-ws-blue-100:focus {
-    color: #E6F0FF;
-  }
-
-  .md\:focus\:text-ws-blue-200:focus {
-    color: #BFDAFF;
-  }
-
-  .md\:focus\:text-ws-blue-300:focus {
-    color: #99C3FF;
-  }
-
-  .md\:focus\:text-ws-blue-400:focus {
-    color: #4D97FE;
-  }
-
-  .md\:focus\:text-ws-blue-500:focus {
-    color: #006AFE;
-  }
-
-  .md\:focus\:text-ws-blue-600:focus {
-    color: #005FE5;
-  }
-
-  .md\:focus\:text-ws-blue-700:focus {
-    color: #004098;
-  }
-
-  .md\:focus\:text-ws-blue-800:focus {
-    color: #003072;
-  }
-
-  .md\:focus\:text-ws-blue-900:focus {
-    color: #00204C;
-  }
-
-  .md\:focus\:text-jet-black:focus {
+  .md\:focus\:text-mr-blue:focus {
     color: #080F5B;
   }
 
-  .md\:focus\:text-jet-black-09:focus {
+  .md\:focus\:text-mr-blue-09:focus {
     color: rgba(13,25,163, .9);
-  }
-
-  .md\:focus\:text-mr-blue:focus {
-    color: #0D19A3;
-  }
-
-  .md\:focus\:text-mr-light-blue:focus {
-    color: #3CC7D4;
   }
 
   .md\:focus\:text-mr-lime:focus {
@@ -45448,56 +42940,12 @@ footer {
     background-color: #702459;
   }
 
-  .lg\:bg-ws-blue-100 {
-    background-color: #E6F0FF;
-  }
-
-  .lg\:bg-ws-blue-200 {
-    background-color: #BFDAFF;
-  }
-
-  .lg\:bg-ws-blue-300 {
-    background-color: #99C3FF;
-  }
-
-  .lg\:bg-ws-blue-400 {
-    background-color: #4D97FE;
-  }
-
-  .lg\:bg-ws-blue-500 {
-    background-color: #006AFE;
-  }
-
-  .lg\:bg-ws-blue-600 {
-    background-color: #005FE5;
-  }
-
-  .lg\:bg-ws-blue-700 {
-    background-color: #004098;
-  }
-
-  .lg\:bg-ws-blue-800 {
-    background-color: #003072;
-  }
-
-  .lg\:bg-ws-blue-900 {
-    background-color: #00204C;
-  }
-
-  .lg\:bg-jet-black {
+  .lg\:bg-mr-blue {
     background-color: #080F5B;
   }
 
-  .lg\:bg-jet-black-09 {
+  .lg\:bg-mr-blue-09 {
     background-color: rgba(13,25,163, .9);
-  }
-
-  .lg\:bg-mr-blue {
-    background-color: #0D19A3;
-  }
-
-  .lg\:bg-mr-light-blue {
-    background-color: #3CC7D4;
   }
 
   .lg\:bg-mr-lime {
@@ -45892,56 +43340,12 @@ footer {
     background-color: #702459;
   }
 
-  .lg\:hover\:bg-ws-blue-100:hover {
-    background-color: #E6F0FF;
-  }
-
-  .lg\:hover\:bg-ws-blue-200:hover {
-    background-color: #BFDAFF;
-  }
-
-  .lg\:hover\:bg-ws-blue-300:hover {
-    background-color: #99C3FF;
-  }
-
-  .lg\:hover\:bg-ws-blue-400:hover {
-    background-color: #4D97FE;
-  }
-
-  .lg\:hover\:bg-ws-blue-500:hover {
-    background-color: #006AFE;
-  }
-
-  .lg\:hover\:bg-ws-blue-600:hover {
-    background-color: #005FE5;
-  }
-
-  .lg\:hover\:bg-ws-blue-700:hover {
-    background-color: #004098;
-  }
-
-  .lg\:hover\:bg-ws-blue-800:hover {
-    background-color: #003072;
-  }
-
-  .lg\:hover\:bg-ws-blue-900:hover {
-    background-color: #00204C;
-  }
-
-  .lg\:hover\:bg-jet-black:hover {
+  .lg\:hover\:bg-mr-blue:hover {
     background-color: #080F5B;
   }
 
-  .lg\:hover\:bg-jet-black-09:hover {
+  .lg\:hover\:bg-mr-blue-09:hover {
     background-color: rgba(13,25,163, .9);
-  }
-
-  .lg\:hover\:bg-mr-blue:hover {
-    background-color: #0D19A3;
-  }
-
-  .lg\:hover\:bg-mr-light-blue:hover {
-    background-color: #3CC7D4;
   }
 
   .lg\:hover\:bg-mr-lime:hover {
@@ -46336,56 +43740,12 @@ footer {
     background-color: #702459;
   }
 
-  .lg\:focus\:bg-ws-blue-100:focus {
-    background-color: #E6F0FF;
-  }
-
-  .lg\:focus\:bg-ws-blue-200:focus {
-    background-color: #BFDAFF;
-  }
-
-  .lg\:focus\:bg-ws-blue-300:focus {
-    background-color: #99C3FF;
-  }
-
-  .lg\:focus\:bg-ws-blue-400:focus {
-    background-color: #4D97FE;
-  }
-
-  .lg\:focus\:bg-ws-blue-500:focus {
-    background-color: #006AFE;
-  }
-
-  .lg\:focus\:bg-ws-blue-600:focus {
-    background-color: #005FE5;
-  }
-
-  .lg\:focus\:bg-ws-blue-700:focus {
-    background-color: #004098;
-  }
-
-  .lg\:focus\:bg-ws-blue-800:focus {
-    background-color: #003072;
-  }
-
-  .lg\:focus\:bg-ws-blue-900:focus {
-    background-color: #00204C;
-  }
-
-  .lg\:focus\:bg-jet-black:focus {
+  .lg\:focus\:bg-mr-blue:focus {
     background-color: #080F5B;
   }
 
-  .lg\:focus\:bg-jet-black-09:focus {
+  .lg\:focus\:bg-mr-blue-09:focus {
     background-color: rgba(13,25,163, .9);
-  }
-
-  .lg\:focus\:bg-mr-blue:focus {
-    background-color: #0D19A3;
-  }
-
-  .lg\:focus\:bg-mr-light-blue:focus {
-    background-color: #3CC7D4;
   }
 
   .lg\:focus\:bg-mr-lime:focus {
@@ -46860,56 +44220,12 @@ footer {
     border-color: #702459;
   }
 
-  .lg\:border-ws-blue-100 {
-    border-color: #E6F0FF;
-  }
-
-  .lg\:border-ws-blue-200 {
-    border-color: #BFDAFF;
-  }
-
-  .lg\:border-ws-blue-300 {
-    border-color: #99C3FF;
-  }
-
-  .lg\:border-ws-blue-400 {
-    border-color: #4D97FE;
-  }
-
-  .lg\:border-ws-blue-500 {
-    border-color: #006AFE;
-  }
-
-  .lg\:border-ws-blue-600 {
-    border-color: #005FE5;
-  }
-
-  .lg\:border-ws-blue-700 {
-    border-color: #004098;
-  }
-
-  .lg\:border-ws-blue-800 {
-    border-color: #003072;
-  }
-
-  .lg\:border-ws-blue-900 {
-    border-color: #00204C;
-  }
-
-  .lg\:border-jet-black {
+  .lg\:border-mr-blue {
     border-color: #080F5B;
   }
 
-  .lg\:border-jet-black-09 {
+  .lg\:border-mr-blue-09 {
     border-color: rgba(13,25,163, .9);
-  }
-
-  .lg\:border-mr-blue {
-    border-color: #0D19A3;
-  }
-
-  .lg\:border-mr-light-blue {
-    border-color: #3CC7D4;
   }
 
   .lg\:border-mr-lime {
@@ -47304,56 +44620,12 @@ footer {
     border-color: #702459;
   }
 
-  .lg\:hover\:border-ws-blue-100:hover {
-    border-color: #E6F0FF;
-  }
-
-  .lg\:hover\:border-ws-blue-200:hover {
-    border-color: #BFDAFF;
-  }
-
-  .lg\:hover\:border-ws-blue-300:hover {
-    border-color: #99C3FF;
-  }
-
-  .lg\:hover\:border-ws-blue-400:hover {
-    border-color: #4D97FE;
-  }
-
-  .lg\:hover\:border-ws-blue-500:hover {
-    border-color: #006AFE;
-  }
-
-  .lg\:hover\:border-ws-blue-600:hover {
-    border-color: #005FE5;
-  }
-
-  .lg\:hover\:border-ws-blue-700:hover {
-    border-color: #004098;
-  }
-
-  .lg\:hover\:border-ws-blue-800:hover {
-    border-color: #003072;
-  }
-
-  .lg\:hover\:border-ws-blue-900:hover {
-    border-color: #00204C;
-  }
-
-  .lg\:hover\:border-jet-black:hover {
+  .lg\:hover\:border-mr-blue:hover {
     border-color: #080F5B;
   }
 
-  .lg\:hover\:border-jet-black-09:hover {
+  .lg\:hover\:border-mr-blue-09:hover {
     border-color: rgba(13,25,163, .9);
-  }
-
-  .lg\:hover\:border-mr-blue:hover {
-    border-color: #0D19A3;
-  }
-
-  .lg\:hover\:border-mr-light-blue:hover {
-    border-color: #3CC7D4;
   }
 
   .lg\:hover\:border-mr-lime:hover {
@@ -47748,56 +45020,12 @@ footer {
     border-color: #702459;
   }
 
-  .lg\:focus\:border-ws-blue-100:focus {
-    border-color: #E6F0FF;
-  }
-
-  .lg\:focus\:border-ws-blue-200:focus {
-    border-color: #BFDAFF;
-  }
-
-  .lg\:focus\:border-ws-blue-300:focus {
-    border-color: #99C3FF;
-  }
-
-  .lg\:focus\:border-ws-blue-400:focus {
-    border-color: #4D97FE;
-  }
-
-  .lg\:focus\:border-ws-blue-500:focus {
-    border-color: #006AFE;
-  }
-
-  .lg\:focus\:border-ws-blue-600:focus {
-    border-color: #005FE5;
-  }
-
-  .lg\:focus\:border-ws-blue-700:focus {
-    border-color: #004098;
-  }
-
-  .lg\:focus\:border-ws-blue-800:focus {
-    border-color: #003072;
-  }
-
-  .lg\:focus\:border-ws-blue-900:focus {
-    border-color: #00204C;
-  }
-
-  .lg\:focus\:border-jet-black:focus {
+  .lg\:focus\:border-mr-blue:focus {
     border-color: #080F5B;
   }
 
-  .lg\:focus\:border-jet-black-09:focus {
+  .lg\:focus\:border-mr-blue-09:focus {
     border-color: rgba(13,25,163, .9);
-  }
-
-  .lg\:focus\:border-mr-blue:focus {
-    border-color: #0D19A3;
-  }
-
-  .lg\:focus\:border-mr-light-blue:focus {
-    border-color: #3CC7D4;
   }
 
   .lg\:focus\:border-mr-lime:focus {
@@ -52654,264 +49882,44 @@ footer {
     color: #702459;
   }
 
-  .lg\:placeholder-ws-blue-100::-webkit-input-placeholder {
-    color: #E6F0FF;
-  }
-
-  .lg\:placeholder-ws-blue-100::-moz-placeholder {
-    color: #E6F0FF;
-  }
-
-  .lg\:placeholder-ws-blue-100:-ms-input-placeholder {
-    color: #E6F0FF;
-  }
-
-  .lg\:placeholder-ws-blue-100::-ms-input-placeholder {
-    color: #E6F0FF;
-  }
-
-  .lg\:placeholder-ws-blue-100::placeholder {
-    color: #E6F0FF;
-  }
-
-  .lg\:placeholder-ws-blue-200::-webkit-input-placeholder {
-    color: #BFDAFF;
-  }
-
-  .lg\:placeholder-ws-blue-200::-moz-placeholder {
-    color: #BFDAFF;
-  }
-
-  .lg\:placeholder-ws-blue-200:-ms-input-placeholder {
-    color: #BFDAFF;
-  }
-
-  .lg\:placeholder-ws-blue-200::-ms-input-placeholder {
-    color: #BFDAFF;
-  }
-
-  .lg\:placeholder-ws-blue-200::placeholder {
-    color: #BFDAFF;
-  }
-
-  .lg\:placeholder-ws-blue-300::-webkit-input-placeholder {
-    color: #99C3FF;
-  }
-
-  .lg\:placeholder-ws-blue-300::-moz-placeholder {
-    color: #99C3FF;
-  }
-
-  .lg\:placeholder-ws-blue-300:-ms-input-placeholder {
-    color: #99C3FF;
-  }
-
-  .lg\:placeholder-ws-blue-300::-ms-input-placeholder {
-    color: #99C3FF;
-  }
-
-  .lg\:placeholder-ws-blue-300::placeholder {
-    color: #99C3FF;
-  }
-
-  .lg\:placeholder-ws-blue-400::-webkit-input-placeholder {
-    color: #4D97FE;
-  }
-
-  .lg\:placeholder-ws-blue-400::-moz-placeholder {
-    color: #4D97FE;
-  }
-
-  .lg\:placeholder-ws-blue-400:-ms-input-placeholder {
-    color: #4D97FE;
-  }
-
-  .lg\:placeholder-ws-blue-400::-ms-input-placeholder {
-    color: #4D97FE;
-  }
-
-  .lg\:placeholder-ws-blue-400::placeholder {
-    color: #4D97FE;
-  }
-
-  .lg\:placeholder-ws-blue-500::-webkit-input-placeholder {
-    color: #006AFE;
-  }
-
-  .lg\:placeholder-ws-blue-500::-moz-placeholder {
-    color: #006AFE;
-  }
-
-  .lg\:placeholder-ws-blue-500:-ms-input-placeholder {
-    color: #006AFE;
-  }
-
-  .lg\:placeholder-ws-blue-500::-ms-input-placeholder {
-    color: #006AFE;
-  }
-
-  .lg\:placeholder-ws-blue-500::placeholder {
-    color: #006AFE;
-  }
-
-  .lg\:placeholder-ws-blue-600::-webkit-input-placeholder {
-    color: #005FE5;
-  }
-
-  .lg\:placeholder-ws-blue-600::-moz-placeholder {
-    color: #005FE5;
-  }
-
-  .lg\:placeholder-ws-blue-600:-ms-input-placeholder {
-    color: #005FE5;
-  }
-
-  .lg\:placeholder-ws-blue-600::-ms-input-placeholder {
-    color: #005FE5;
-  }
-
-  .lg\:placeholder-ws-blue-600::placeholder {
-    color: #005FE5;
-  }
-
-  .lg\:placeholder-ws-blue-700::-webkit-input-placeholder {
-    color: #004098;
-  }
-
-  .lg\:placeholder-ws-blue-700::-moz-placeholder {
-    color: #004098;
-  }
-
-  .lg\:placeholder-ws-blue-700:-ms-input-placeholder {
-    color: #004098;
-  }
-
-  .lg\:placeholder-ws-blue-700::-ms-input-placeholder {
-    color: #004098;
-  }
-
-  .lg\:placeholder-ws-blue-700::placeholder {
-    color: #004098;
-  }
-
-  .lg\:placeholder-ws-blue-800::-webkit-input-placeholder {
-    color: #003072;
-  }
-
-  .lg\:placeholder-ws-blue-800::-moz-placeholder {
-    color: #003072;
-  }
-
-  .lg\:placeholder-ws-blue-800:-ms-input-placeholder {
-    color: #003072;
-  }
-
-  .lg\:placeholder-ws-blue-800::-ms-input-placeholder {
-    color: #003072;
-  }
-
-  .lg\:placeholder-ws-blue-800::placeholder {
-    color: #003072;
-  }
-
-  .lg\:placeholder-ws-blue-900::-webkit-input-placeholder {
-    color: #00204C;
-  }
-
-  .lg\:placeholder-ws-blue-900::-moz-placeholder {
-    color: #00204C;
-  }
-
-  .lg\:placeholder-ws-blue-900:-ms-input-placeholder {
-    color: #00204C;
-  }
-
-  .lg\:placeholder-ws-blue-900::-ms-input-placeholder {
-    color: #00204C;
-  }
-
-  .lg\:placeholder-ws-blue-900::placeholder {
-    color: #00204C;
-  }
-
-  .lg\:placeholder-jet-black::-webkit-input-placeholder {
-    color: #080F5B;
-  }
-
-  .lg\:placeholder-jet-black::-moz-placeholder {
-    color: #080F5B;
-  }
-
-  .lg\:placeholder-jet-black:-ms-input-placeholder {
-    color: #080F5B;
-  }
-
-  .lg\:placeholder-jet-black::-ms-input-placeholder {
-    color: #080F5B;
-  }
-
-  .lg\:placeholder-jet-black::placeholder {
-    color: #080F5B;
-  }
-
-  .lg\:placeholder-jet-black-09::-webkit-input-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .lg\:placeholder-jet-black-09::-moz-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .lg\:placeholder-jet-black-09:-ms-input-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .lg\:placeholder-jet-black-09::-ms-input-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .lg\:placeholder-jet-black-09::placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
   .lg\:placeholder-mr-blue::-webkit-input-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .lg\:placeholder-mr-blue::-moz-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .lg\:placeholder-mr-blue:-ms-input-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .lg\:placeholder-mr-blue::-ms-input-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .lg\:placeholder-mr-blue::placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
-  .lg\:placeholder-mr-light-blue::-webkit-input-placeholder {
-    color: #3CC7D4;
+  .lg\:placeholder-mr-blue-09::-webkit-input-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .lg\:placeholder-mr-light-blue::-moz-placeholder {
-    color: #3CC7D4;
+  .lg\:placeholder-mr-blue-09::-moz-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .lg\:placeholder-mr-light-blue:-ms-input-placeholder {
-    color: #3CC7D4;
+  .lg\:placeholder-mr-blue-09:-ms-input-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .lg\:placeholder-mr-light-blue::-ms-input-placeholder {
-    color: #3CC7D4;
+  .lg\:placeholder-mr-blue-09::-ms-input-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .lg\:placeholder-mr-light-blue::placeholder {
-    color: #3CC7D4;
+  .lg\:placeholder-mr-blue-09::placeholder {
+    color: rgba(13,25,163, .9);
   }
 
   .lg\:placeholder-mr-lime::-webkit-input-placeholder {
@@ -54874,264 +51882,44 @@ footer {
     color: #702459;
   }
 
-  .lg\:focus\:placeholder-ws-blue-100:focus::-webkit-input-placeholder {
-    color: #E6F0FF;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-100:focus::-moz-placeholder {
-    color: #E6F0FF;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-100:focus:-ms-input-placeholder {
-    color: #E6F0FF;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-100:focus::-ms-input-placeholder {
-    color: #E6F0FF;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-100:focus::placeholder {
-    color: #E6F0FF;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-200:focus::-webkit-input-placeholder {
-    color: #BFDAFF;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-200:focus::-moz-placeholder {
-    color: #BFDAFF;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-200:focus:-ms-input-placeholder {
-    color: #BFDAFF;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-200:focus::-ms-input-placeholder {
-    color: #BFDAFF;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-200:focus::placeholder {
-    color: #BFDAFF;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-300:focus::-webkit-input-placeholder {
-    color: #99C3FF;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-300:focus::-moz-placeholder {
-    color: #99C3FF;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-300:focus:-ms-input-placeholder {
-    color: #99C3FF;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-300:focus::-ms-input-placeholder {
-    color: #99C3FF;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-300:focus::placeholder {
-    color: #99C3FF;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-400:focus::-webkit-input-placeholder {
-    color: #4D97FE;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-400:focus::-moz-placeholder {
-    color: #4D97FE;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-400:focus:-ms-input-placeholder {
-    color: #4D97FE;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-400:focus::-ms-input-placeholder {
-    color: #4D97FE;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-400:focus::placeholder {
-    color: #4D97FE;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-500:focus::-webkit-input-placeholder {
-    color: #006AFE;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-500:focus::-moz-placeholder {
-    color: #006AFE;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-500:focus:-ms-input-placeholder {
-    color: #006AFE;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-500:focus::-ms-input-placeholder {
-    color: #006AFE;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-500:focus::placeholder {
-    color: #006AFE;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-600:focus::-webkit-input-placeholder {
-    color: #005FE5;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-600:focus::-moz-placeholder {
-    color: #005FE5;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-600:focus:-ms-input-placeholder {
-    color: #005FE5;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-600:focus::-ms-input-placeholder {
-    color: #005FE5;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-600:focus::placeholder {
-    color: #005FE5;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-700:focus::-webkit-input-placeholder {
-    color: #004098;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-700:focus::-moz-placeholder {
-    color: #004098;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-700:focus:-ms-input-placeholder {
-    color: #004098;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-700:focus::-ms-input-placeholder {
-    color: #004098;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-700:focus::placeholder {
-    color: #004098;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-800:focus::-webkit-input-placeholder {
-    color: #003072;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-800:focus::-moz-placeholder {
-    color: #003072;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-800:focus:-ms-input-placeholder {
-    color: #003072;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-800:focus::-ms-input-placeholder {
-    color: #003072;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-800:focus::placeholder {
-    color: #003072;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-900:focus::-webkit-input-placeholder {
-    color: #00204C;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-900:focus::-moz-placeholder {
-    color: #00204C;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-900:focus:-ms-input-placeholder {
-    color: #00204C;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-900:focus::-ms-input-placeholder {
-    color: #00204C;
-  }
-
-  .lg\:focus\:placeholder-ws-blue-900:focus::placeholder {
-    color: #00204C;
-  }
-
-  .lg\:focus\:placeholder-jet-black:focus::-webkit-input-placeholder {
-    color: #080F5B;
-  }
-
-  .lg\:focus\:placeholder-jet-black:focus::-moz-placeholder {
-    color: #080F5B;
-  }
-
-  .lg\:focus\:placeholder-jet-black:focus:-ms-input-placeholder {
-    color: #080F5B;
-  }
-
-  .lg\:focus\:placeholder-jet-black:focus::-ms-input-placeholder {
-    color: #080F5B;
-  }
-
-  .lg\:focus\:placeholder-jet-black:focus::placeholder {
-    color: #080F5B;
-  }
-
-  .lg\:focus\:placeholder-jet-black-09:focus::-webkit-input-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .lg\:focus\:placeholder-jet-black-09:focus::-moz-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .lg\:focus\:placeholder-jet-black-09:focus:-ms-input-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .lg\:focus\:placeholder-jet-black-09:focus::-ms-input-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .lg\:focus\:placeholder-jet-black-09:focus::placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
   .lg\:focus\:placeholder-mr-blue:focus::-webkit-input-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .lg\:focus\:placeholder-mr-blue:focus::-moz-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .lg\:focus\:placeholder-mr-blue:focus:-ms-input-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .lg\:focus\:placeholder-mr-blue:focus::-ms-input-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .lg\:focus\:placeholder-mr-blue:focus::placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
-  .lg\:focus\:placeholder-mr-light-blue:focus::-webkit-input-placeholder {
-    color: #3CC7D4;
+  .lg\:focus\:placeholder-mr-blue-09:focus::-webkit-input-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .lg\:focus\:placeholder-mr-light-blue:focus::-moz-placeholder {
-    color: #3CC7D4;
+  .lg\:focus\:placeholder-mr-blue-09:focus::-moz-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .lg\:focus\:placeholder-mr-light-blue:focus:-ms-input-placeholder {
-    color: #3CC7D4;
+  .lg\:focus\:placeholder-mr-blue-09:focus:-ms-input-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .lg\:focus\:placeholder-mr-light-blue:focus::-ms-input-placeholder {
-    color: #3CC7D4;
+  .lg\:focus\:placeholder-mr-blue-09:focus::-ms-input-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .lg\:focus\:placeholder-mr-light-blue:focus::placeholder {
-    color: #3CC7D4;
+  .lg\:focus\:placeholder-mr-blue-09:focus::placeholder {
+    color: rgba(13,25,163, .9);
   }
 
   .lg\:focus\:placeholder-mr-lime:focus::-webkit-input-placeholder {
@@ -55881,56 +52669,12 @@ footer {
     color: #702459;
   }
 
-  .lg\:text-ws-blue-100 {
-    color: #E6F0FF;
-  }
-
-  .lg\:text-ws-blue-200 {
-    color: #BFDAFF;
-  }
-
-  .lg\:text-ws-blue-300 {
-    color: #99C3FF;
-  }
-
-  .lg\:text-ws-blue-400 {
-    color: #4D97FE;
-  }
-
-  .lg\:text-ws-blue-500 {
-    color: #006AFE;
-  }
-
-  .lg\:text-ws-blue-600 {
-    color: #005FE5;
-  }
-
-  .lg\:text-ws-blue-700 {
-    color: #004098;
-  }
-
-  .lg\:text-ws-blue-800 {
-    color: #003072;
-  }
-
-  .lg\:text-ws-blue-900 {
-    color: #00204C;
-  }
-
-  .lg\:text-jet-black {
+  .lg\:text-mr-blue {
     color: #080F5B;
   }
 
-  .lg\:text-jet-black-09 {
+  .lg\:text-mr-blue-09 {
     color: rgba(13,25,163, .9);
-  }
-
-  .lg\:text-mr-blue {
-    color: #0D19A3;
-  }
-
-  .lg\:text-mr-light-blue {
-    color: #3CC7D4;
   }
 
   .lg\:text-mr-lime {
@@ -56325,56 +53069,12 @@ footer {
     color: #702459;
   }
 
-  .lg\:hover\:text-ws-blue-100:hover {
-    color: #E6F0FF;
-  }
-
-  .lg\:hover\:text-ws-blue-200:hover {
-    color: #BFDAFF;
-  }
-
-  .lg\:hover\:text-ws-blue-300:hover {
-    color: #99C3FF;
-  }
-
-  .lg\:hover\:text-ws-blue-400:hover {
-    color: #4D97FE;
-  }
-
-  .lg\:hover\:text-ws-blue-500:hover {
-    color: #006AFE;
-  }
-
-  .lg\:hover\:text-ws-blue-600:hover {
-    color: #005FE5;
-  }
-
-  .lg\:hover\:text-ws-blue-700:hover {
-    color: #004098;
-  }
-
-  .lg\:hover\:text-ws-blue-800:hover {
-    color: #003072;
-  }
-
-  .lg\:hover\:text-ws-blue-900:hover {
-    color: #00204C;
-  }
-
-  .lg\:hover\:text-jet-black:hover {
+  .lg\:hover\:text-mr-blue:hover {
     color: #080F5B;
   }
 
-  .lg\:hover\:text-jet-black-09:hover {
+  .lg\:hover\:text-mr-blue-09:hover {
     color: rgba(13,25,163, .9);
-  }
-
-  .lg\:hover\:text-mr-blue:hover {
-    color: #0D19A3;
-  }
-
-  .lg\:hover\:text-mr-light-blue:hover {
-    color: #3CC7D4;
   }
 
   .lg\:hover\:text-mr-lime:hover {
@@ -56769,56 +53469,12 @@ footer {
     color: #702459;
   }
 
-  .lg\:focus\:text-ws-blue-100:focus {
-    color: #E6F0FF;
-  }
-
-  .lg\:focus\:text-ws-blue-200:focus {
-    color: #BFDAFF;
-  }
-
-  .lg\:focus\:text-ws-blue-300:focus {
-    color: #99C3FF;
-  }
-
-  .lg\:focus\:text-ws-blue-400:focus {
-    color: #4D97FE;
-  }
-
-  .lg\:focus\:text-ws-blue-500:focus {
-    color: #006AFE;
-  }
-
-  .lg\:focus\:text-ws-blue-600:focus {
-    color: #005FE5;
-  }
-
-  .lg\:focus\:text-ws-blue-700:focus {
-    color: #004098;
-  }
-
-  .lg\:focus\:text-ws-blue-800:focus {
-    color: #003072;
-  }
-
-  .lg\:focus\:text-ws-blue-900:focus {
-    color: #00204C;
-  }
-
-  .lg\:focus\:text-jet-black:focus {
+  .lg\:focus\:text-mr-blue:focus {
     color: #080F5B;
   }
 
-  .lg\:focus\:text-jet-black-09:focus {
+  .lg\:focus\:text-mr-blue-09:focus {
     color: rgba(13,25,163, .9);
-  }
-
-  .lg\:focus\:text-mr-blue:focus {
-    color: #0D19A3;
-  }
-
-  .lg\:focus\:text-mr-light-blue:focus {
-    color: #3CC7D4;
   }
 
   .lg\:focus\:text-mr-lime:focus {
@@ -60141,56 +56797,12 @@ footer {
     background-color: #702459;
   }
 
-  .xl\:bg-ws-blue-100 {
-    background-color: #E6F0FF;
-  }
-
-  .xl\:bg-ws-blue-200 {
-    background-color: #BFDAFF;
-  }
-
-  .xl\:bg-ws-blue-300 {
-    background-color: #99C3FF;
-  }
-
-  .xl\:bg-ws-blue-400 {
-    background-color: #4D97FE;
-  }
-
-  .xl\:bg-ws-blue-500 {
-    background-color: #006AFE;
-  }
-
-  .xl\:bg-ws-blue-600 {
-    background-color: #005FE5;
-  }
-
-  .xl\:bg-ws-blue-700 {
-    background-color: #004098;
-  }
-
-  .xl\:bg-ws-blue-800 {
-    background-color: #003072;
-  }
-
-  .xl\:bg-ws-blue-900 {
-    background-color: #00204C;
-  }
-
-  .xl\:bg-jet-black {
+  .xl\:bg-mr-blue {
     background-color: #080F5B;
   }
 
-  .xl\:bg-jet-black-09 {
+  .xl\:bg-mr-blue-09 {
     background-color: rgba(13,25,163, .9);
-  }
-
-  .xl\:bg-mr-blue {
-    background-color: #0D19A3;
-  }
-
-  .xl\:bg-mr-light-blue {
-    background-color: #3CC7D4;
   }
 
   .xl\:bg-mr-lime {
@@ -60585,56 +57197,12 @@ footer {
     background-color: #702459;
   }
 
-  .xl\:hover\:bg-ws-blue-100:hover {
-    background-color: #E6F0FF;
-  }
-
-  .xl\:hover\:bg-ws-blue-200:hover {
-    background-color: #BFDAFF;
-  }
-
-  .xl\:hover\:bg-ws-blue-300:hover {
-    background-color: #99C3FF;
-  }
-
-  .xl\:hover\:bg-ws-blue-400:hover {
-    background-color: #4D97FE;
-  }
-
-  .xl\:hover\:bg-ws-blue-500:hover {
-    background-color: #006AFE;
-  }
-
-  .xl\:hover\:bg-ws-blue-600:hover {
-    background-color: #005FE5;
-  }
-
-  .xl\:hover\:bg-ws-blue-700:hover {
-    background-color: #004098;
-  }
-
-  .xl\:hover\:bg-ws-blue-800:hover {
-    background-color: #003072;
-  }
-
-  .xl\:hover\:bg-ws-blue-900:hover {
-    background-color: #00204C;
-  }
-
-  .xl\:hover\:bg-jet-black:hover {
+  .xl\:hover\:bg-mr-blue:hover {
     background-color: #080F5B;
   }
 
-  .xl\:hover\:bg-jet-black-09:hover {
+  .xl\:hover\:bg-mr-blue-09:hover {
     background-color: rgba(13,25,163, .9);
-  }
-
-  .xl\:hover\:bg-mr-blue:hover {
-    background-color: #0D19A3;
-  }
-
-  .xl\:hover\:bg-mr-light-blue:hover {
-    background-color: #3CC7D4;
   }
 
   .xl\:hover\:bg-mr-lime:hover {
@@ -61029,56 +57597,12 @@ footer {
     background-color: #702459;
   }
 
-  .xl\:focus\:bg-ws-blue-100:focus {
-    background-color: #E6F0FF;
-  }
-
-  .xl\:focus\:bg-ws-blue-200:focus {
-    background-color: #BFDAFF;
-  }
-
-  .xl\:focus\:bg-ws-blue-300:focus {
-    background-color: #99C3FF;
-  }
-
-  .xl\:focus\:bg-ws-blue-400:focus {
-    background-color: #4D97FE;
-  }
-
-  .xl\:focus\:bg-ws-blue-500:focus {
-    background-color: #006AFE;
-  }
-
-  .xl\:focus\:bg-ws-blue-600:focus {
-    background-color: #005FE5;
-  }
-
-  .xl\:focus\:bg-ws-blue-700:focus {
-    background-color: #004098;
-  }
-
-  .xl\:focus\:bg-ws-blue-800:focus {
-    background-color: #003072;
-  }
-
-  .xl\:focus\:bg-ws-blue-900:focus {
-    background-color: #00204C;
-  }
-
-  .xl\:focus\:bg-jet-black:focus {
+  .xl\:focus\:bg-mr-blue:focus {
     background-color: #080F5B;
   }
 
-  .xl\:focus\:bg-jet-black-09:focus {
+  .xl\:focus\:bg-mr-blue-09:focus {
     background-color: rgba(13,25,163, .9);
-  }
-
-  .xl\:focus\:bg-mr-blue:focus {
-    background-color: #0D19A3;
-  }
-
-  .xl\:focus\:bg-mr-light-blue:focus {
-    background-color: #3CC7D4;
   }
 
   .xl\:focus\:bg-mr-lime:focus {
@@ -61553,56 +58077,12 @@ footer {
     border-color: #702459;
   }
 
-  .xl\:border-ws-blue-100 {
-    border-color: #E6F0FF;
-  }
-
-  .xl\:border-ws-blue-200 {
-    border-color: #BFDAFF;
-  }
-
-  .xl\:border-ws-blue-300 {
-    border-color: #99C3FF;
-  }
-
-  .xl\:border-ws-blue-400 {
-    border-color: #4D97FE;
-  }
-
-  .xl\:border-ws-blue-500 {
-    border-color: #006AFE;
-  }
-
-  .xl\:border-ws-blue-600 {
-    border-color: #005FE5;
-  }
-
-  .xl\:border-ws-blue-700 {
-    border-color: #004098;
-  }
-
-  .xl\:border-ws-blue-800 {
-    border-color: #003072;
-  }
-
-  .xl\:border-ws-blue-900 {
-    border-color: #00204C;
-  }
-
-  .xl\:border-jet-black {
+  .xl\:border-mr-blue {
     border-color: #080F5B;
   }
 
-  .xl\:border-jet-black-09 {
+  .xl\:border-mr-blue-09 {
     border-color: rgba(13,25,163, .9);
-  }
-
-  .xl\:border-mr-blue {
-    border-color: #0D19A3;
-  }
-
-  .xl\:border-mr-light-blue {
-    border-color: #3CC7D4;
   }
 
   .xl\:border-mr-lime {
@@ -61997,56 +58477,12 @@ footer {
     border-color: #702459;
   }
 
-  .xl\:hover\:border-ws-blue-100:hover {
-    border-color: #E6F0FF;
-  }
-
-  .xl\:hover\:border-ws-blue-200:hover {
-    border-color: #BFDAFF;
-  }
-
-  .xl\:hover\:border-ws-blue-300:hover {
-    border-color: #99C3FF;
-  }
-
-  .xl\:hover\:border-ws-blue-400:hover {
-    border-color: #4D97FE;
-  }
-
-  .xl\:hover\:border-ws-blue-500:hover {
-    border-color: #006AFE;
-  }
-
-  .xl\:hover\:border-ws-blue-600:hover {
-    border-color: #005FE5;
-  }
-
-  .xl\:hover\:border-ws-blue-700:hover {
-    border-color: #004098;
-  }
-
-  .xl\:hover\:border-ws-blue-800:hover {
-    border-color: #003072;
-  }
-
-  .xl\:hover\:border-ws-blue-900:hover {
-    border-color: #00204C;
-  }
-
-  .xl\:hover\:border-jet-black:hover {
+  .xl\:hover\:border-mr-blue:hover {
     border-color: #080F5B;
   }
 
-  .xl\:hover\:border-jet-black-09:hover {
+  .xl\:hover\:border-mr-blue-09:hover {
     border-color: rgba(13,25,163, .9);
-  }
-
-  .xl\:hover\:border-mr-blue:hover {
-    border-color: #0D19A3;
-  }
-
-  .xl\:hover\:border-mr-light-blue:hover {
-    border-color: #3CC7D4;
   }
 
   .xl\:hover\:border-mr-lime:hover {
@@ -62441,56 +58877,12 @@ footer {
     border-color: #702459;
   }
 
-  .xl\:focus\:border-ws-blue-100:focus {
-    border-color: #E6F0FF;
-  }
-
-  .xl\:focus\:border-ws-blue-200:focus {
-    border-color: #BFDAFF;
-  }
-
-  .xl\:focus\:border-ws-blue-300:focus {
-    border-color: #99C3FF;
-  }
-
-  .xl\:focus\:border-ws-blue-400:focus {
-    border-color: #4D97FE;
-  }
-
-  .xl\:focus\:border-ws-blue-500:focus {
-    border-color: #006AFE;
-  }
-
-  .xl\:focus\:border-ws-blue-600:focus {
-    border-color: #005FE5;
-  }
-
-  .xl\:focus\:border-ws-blue-700:focus {
-    border-color: #004098;
-  }
-
-  .xl\:focus\:border-ws-blue-800:focus {
-    border-color: #003072;
-  }
-
-  .xl\:focus\:border-ws-blue-900:focus {
-    border-color: #00204C;
-  }
-
-  .xl\:focus\:border-jet-black:focus {
+  .xl\:focus\:border-mr-blue:focus {
     border-color: #080F5B;
   }
 
-  .xl\:focus\:border-jet-black-09:focus {
+  .xl\:focus\:border-mr-blue-09:focus {
     border-color: rgba(13,25,163, .9);
-  }
-
-  .xl\:focus\:border-mr-blue:focus {
-    border-color: #0D19A3;
-  }
-
-  .xl\:focus\:border-mr-light-blue:focus {
-    border-color: #3CC7D4;
   }
 
   .xl\:focus\:border-mr-lime:focus {
@@ -67347,264 +63739,44 @@ footer {
     color: #702459;
   }
 
-  .xl\:placeholder-ws-blue-100::-webkit-input-placeholder {
-    color: #E6F0FF;
-  }
-
-  .xl\:placeholder-ws-blue-100::-moz-placeholder {
-    color: #E6F0FF;
-  }
-
-  .xl\:placeholder-ws-blue-100:-ms-input-placeholder {
-    color: #E6F0FF;
-  }
-
-  .xl\:placeholder-ws-blue-100::-ms-input-placeholder {
-    color: #E6F0FF;
-  }
-
-  .xl\:placeholder-ws-blue-100::placeholder {
-    color: #E6F0FF;
-  }
-
-  .xl\:placeholder-ws-blue-200::-webkit-input-placeholder {
-    color: #BFDAFF;
-  }
-
-  .xl\:placeholder-ws-blue-200::-moz-placeholder {
-    color: #BFDAFF;
-  }
-
-  .xl\:placeholder-ws-blue-200:-ms-input-placeholder {
-    color: #BFDAFF;
-  }
-
-  .xl\:placeholder-ws-blue-200::-ms-input-placeholder {
-    color: #BFDAFF;
-  }
-
-  .xl\:placeholder-ws-blue-200::placeholder {
-    color: #BFDAFF;
-  }
-
-  .xl\:placeholder-ws-blue-300::-webkit-input-placeholder {
-    color: #99C3FF;
-  }
-
-  .xl\:placeholder-ws-blue-300::-moz-placeholder {
-    color: #99C3FF;
-  }
-
-  .xl\:placeholder-ws-blue-300:-ms-input-placeholder {
-    color: #99C3FF;
-  }
-
-  .xl\:placeholder-ws-blue-300::-ms-input-placeholder {
-    color: #99C3FF;
-  }
-
-  .xl\:placeholder-ws-blue-300::placeholder {
-    color: #99C3FF;
-  }
-
-  .xl\:placeholder-ws-blue-400::-webkit-input-placeholder {
-    color: #4D97FE;
-  }
-
-  .xl\:placeholder-ws-blue-400::-moz-placeholder {
-    color: #4D97FE;
-  }
-
-  .xl\:placeholder-ws-blue-400:-ms-input-placeholder {
-    color: #4D97FE;
-  }
-
-  .xl\:placeholder-ws-blue-400::-ms-input-placeholder {
-    color: #4D97FE;
-  }
-
-  .xl\:placeholder-ws-blue-400::placeholder {
-    color: #4D97FE;
-  }
-
-  .xl\:placeholder-ws-blue-500::-webkit-input-placeholder {
-    color: #006AFE;
-  }
-
-  .xl\:placeholder-ws-blue-500::-moz-placeholder {
-    color: #006AFE;
-  }
-
-  .xl\:placeholder-ws-blue-500:-ms-input-placeholder {
-    color: #006AFE;
-  }
-
-  .xl\:placeholder-ws-blue-500::-ms-input-placeholder {
-    color: #006AFE;
-  }
-
-  .xl\:placeholder-ws-blue-500::placeholder {
-    color: #006AFE;
-  }
-
-  .xl\:placeholder-ws-blue-600::-webkit-input-placeholder {
-    color: #005FE5;
-  }
-
-  .xl\:placeholder-ws-blue-600::-moz-placeholder {
-    color: #005FE5;
-  }
-
-  .xl\:placeholder-ws-blue-600:-ms-input-placeholder {
-    color: #005FE5;
-  }
-
-  .xl\:placeholder-ws-blue-600::-ms-input-placeholder {
-    color: #005FE5;
-  }
-
-  .xl\:placeholder-ws-blue-600::placeholder {
-    color: #005FE5;
-  }
-
-  .xl\:placeholder-ws-blue-700::-webkit-input-placeholder {
-    color: #004098;
-  }
-
-  .xl\:placeholder-ws-blue-700::-moz-placeholder {
-    color: #004098;
-  }
-
-  .xl\:placeholder-ws-blue-700:-ms-input-placeholder {
-    color: #004098;
-  }
-
-  .xl\:placeholder-ws-blue-700::-ms-input-placeholder {
-    color: #004098;
-  }
-
-  .xl\:placeholder-ws-blue-700::placeholder {
-    color: #004098;
-  }
-
-  .xl\:placeholder-ws-blue-800::-webkit-input-placeholder {
-    color: #003072;
-  }
-
-  .xl\:placeholder-ws-blue-800::-moz-placeholder {
-    color: #003072;
-  }
-
-  .xl\:placeholder-ws-blue-800:-ms-input-placeholder {
-    color: #003072;
-  }
-
-  .xl\:placeholder-ws-blue-800::-ms-input-placeholder {
-    color: #003072;
-  }
-
-  .xl\:placeholder-ws-blue-800::placeholder {
-    color: #003072;
-  }
-
-  .xl\:placeholder-ws-blue-900::-webkit-input-placeholder {
-    color: #00204C;
-  }
-
-  .xl\:placeholder-ws-blue-900::-moz-placeholder {
-    color: #00204C;
-  }
-
-  .xl\:placeholder-ws-blue-900:-ms-input-placeholder {
-    color: #00204C;
-  }
-
-  .xl\:placeholder-ws-blue-900::-ms-input-placeholder {
-    color: #00204C;
-  }
-
-  .xl\:placeholder-ws-blue-900::placeholder {
-    color: #00204C;
-  }
-
-  .xl\:placeholder-jet-black::-webkit-input-placeholder {
-    color: #080F5B;
-  }
-
-  .xl\:placeholder-jet-black::-moz-placeholder {
-    color: #080F5B;
-  }
-
-  .xl\:placeholder-jet-black:-ms-input-placeholder {
-    color: #080F5B;
-  }
-
-  .xl\:placeholder-jet-black::-ms-input-placeholder {
-    color: #080F5B;
-  }
-
-  .xl\:placeholder-jet-black::placeholder {
-    color: #080F5B;
-  }
-
-  .xl\:placeholder-jet-black-09::-webkit-input-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .xl\:placeholder-jet-black-09::-moz-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .xl\:placeholder-jet-black-09:-ms-input-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .xl\:placeholder-jet-black-09::-ms-input-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .xl\:placeholder-jet-black-09::placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
   .xl\:placeholder-mr-blue::-webkit-input-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .xl\:placeholder-mr-blue::-moz-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .xl\:placeholder-mr-blue:-ms-input-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .xl\:placeholder-mr-blue::-ms-input-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .xl\:placeholder-mr-blue::placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
-  .xl\:placeholder-mr-light-blue::-webkit-input-placeholder {
-    color: #3CC7D4;
+  .xl\:placeholder-mr-blue-09::-webkit-input-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .xl\:placeholder-mr-light-blue::-moz-placeholder {
-    color: #3CC7D4;
+  .xl\:placeholder-mr-blue-09::-moz-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .xl\:placeholder-mr-light-blue:-ms-input-placeholder {
-    color: #3CC7D4;
+  .xl\:placeholder-mr-blue-09:-ms-input-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .xl\:placeholder-mr-light-blue::-ms-input-placeholder {
-    color: #3CC7D4;
+  .xl\:placeholder-mr-blue-09::-ms-input-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .xl\:placeholder-mr-light-blue::placeholder {
-    color: #3CC7D4;
+  .xl\:placeholder-mr-blue-09::placeholder {
+    color: rgba(13,25,163, .9);
   }
 
   .xl\:placeholder-mr-lime::-webkit-input-placeholder {
@@ -69567,264 +65739,44 @@ footer {
     color: #702459;
   }
 
-  .xl\:focus\:placeholder-ws-blue-100:focus::-webkit-input-placeholder {
-    color: #E6F0FF;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-100:focus::-moz-placeholder {
-    color: #E6F0FF;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-100:focus:-ms-input-placeholder {
-    color: #E6F0FF;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-100:focus::-ms-input-placeholder {
-    color: #E6F0FF;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-100:focus::placeholder {
-    color: #E6F0FF;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-200:focus::-webkit-input-placeholder {
-    color: #BFDAFF;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-200:focus::-moz-placeholder {
-    color: #BFDAFF;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-200:focus:-ms-input-placeholder {
-    color: #BFDAFF;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-200:focus::-ms-input-placeholder {
-    color: #BFDAFF;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-200:focus::placeholder {
-    color: #BFDAFF;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-300:focus::-webkit-input-placeholder {
-    color: #99C3FF;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-300:focus::-moz-placeholder {
-    color: #99C3FF;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-300:focus:-ms-input-placeholder {
-    color: #99C3FF;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-300:focus::-ms-input-placeholder {
-    color: #99C3FF;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-300:focus::placeholder {
-    color: #99C3FF;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-400:focus::-webkit-input-placeholder {
-    color: #4D97FE;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-400:focus::-moz-placeholder {
-    color: #4D97FE;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-400:focus:-ms-input-placeholder {
-    color: #4D97FE;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-400:focus::-ms-input-placeholder {
-    color: #4D97FE;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-400:focus::placeholder {
-    color: #4D97FE;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-500:focus::-webkit-input-placeholder {
-    color: #006AFE;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-500:focus::-moz-placeholder {
-    color: #006AFE;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-500:focus:-ms-input-placeholder {
-    color: #006AFE;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-500:focus::-ms-input-placeholder {
-    color: #006AFE;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-500:focus::placeholder {
-    color: #006AFE;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-600:focus::-webkit-input-placeholder {
-    color: #005FE5;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-600:focus::-moz-placeholder {
-    color: #005FE5;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-600:focus:-ms-input-placeholder {
-    color: #005FE5;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-600:focus::-ms-input-placeholder {
-    color: #005FE5;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-600:focus::placeholder {
-    color: #005FE5;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-700:focus::-webkit-input-placeholder {
-    color: #004098;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-700:focus::-moz-placeholder {
-    color: #004098;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-700:focus:-ms-input-placeholder {
-    color: #004098;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-700:focus::-ms-input-placeholder {
-    color: #004098;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-700:focus::placeholder {
-    color: #004098;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-800:focus::-webkit-input-placeholder {
-    color: #003072;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-800:focus::-moz-placeholder {
-    color: #003072;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-800:focus:-ms-input-placeholder {
-    color: #003072;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-800:focus::-ms-input-placeholder {
-    color: #003072;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-800:focus::placeholder {
-    color: #003072;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-900:focus::-webkit-input-placeholder {
-    color: #00204C;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-900:focus::-moz-placeholder {
-    color: #00204C;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-900:focus:-ms-input-placeholder {
-    color: #00204C;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-900:focus::-ms-input-placeholder {
-    color: #00204C;
-  }
-
-  .xl\:focus\:placeholder-ws-blue-900:focus::placeholder {
-    color: #00204C;
-  }
-
-  .xl\:focus\:placeholder-jet-black:focus::-webkit-input-placeholder {
-    color: #080F5B;
-  }
-
-  .xl\:focus\:placeholder-jet-black:focus::-moz-placeholder {
-    color: #080F5B;
-  }
-
-  .xl\:focus\:placeholder-jet-black:focus:-ms-input-placeholder {
-    color: #080F5B;
-  }
-
-  .xl\:focus\:placeholder-jet-black:focus::-ms-input-placeholder {
-    color: #080F5B;
-  }
-
-  .xl\:focus\:placeholder-jet-black:focus::placeholder {
-    color: #080F5B;
-  }
-
-  .xl\:focus\:placeholder-jet-black-09:focus::-webkit-input-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .xl\:focus\:placeholder-jet-black-09:focus::-moz-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .xl\:focus\:placeholder-jet-black-09:focus:-ms-input-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .xl\:focus\:placeholder-jet-black-09:focus::-ms-input-placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
-  .xl\:focus\:placeholder-jet-black-09:focus::placeholder {
-    color: rgba(13,25,163, .9);
-  }
-
   .xl\:focus\:placeholder-mr-blue:focus::-webkit-input-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .xl\:focus\:placeholder-mr-blue:focus::-moz-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .xl\:focus\:placeholder-mr-blue:focus:-ms-input-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .xl\:focus\:placeholder-mr-blue:focus::-ms-input-placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
   .xl\:focus\:placeholder-mr-blue:focus::placeholder {
-    color: #0D19A3;
+    color: #080F5B;
   }
 
-  .xl\:focus\:placeholder-mr-light-blue:focus::-webkit-input-placeholder {
-    color: #3CC7D4;
+  .xl\:focus\:placeholder-mr-blue-09:focus::-webkit-input-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .xl\:focus\:placeholder-mr-light-blue:focus::-moz-placeholder {
-    color: #3CC7D4;
+  .xl\:focus\:placeholder-mr-blue-09:focus::-moz-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .xl\:focus\:placeholder-mr-light-blue:focus:-ms-input-placeholder {
-    color: #3CC7D4;
+  .xl\:focus\:placeholder-mr-blue-09:focus:-ms-input-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .xl\:focus\:placeholder-mr-light-blue:focus::-ms-input-placeholder {
-    color: #3CC7D4;
+  .xl\:focus\:placeholder-mr-blue-09:focus::-ms-input-placeholder {
+    color: rgba(13,25,163, .9);
   }
 
-  .xl\:focus\:placeholder-mr-light-blue:focus::placeholder {
-    color: #3CC7D4;
+  .xl\:focus\:placeholder-mr-blue-09:focus::placeholder {
+    color: rgba(13,25,163, .9);
   }
 
   .xl\:focus\:placeholder-mr-lime:focus::-webkit-input-placeholder {
@@ -70574,56 +66526,12 @@ footer {
     color: #702459;
   }
 
-  .xl\:text-ws-blue-100 {
-    color: #E6F0FF;
-  }
-
-  .xl\:text-ws-blue-200 {
-    color: #BFDAFF;
-  }
-
-  .xl\:text-ws-blue-300 {
-    color: #99C3FF;
-  }
-
-  .xl\:text-ws-blue-400 {
-    color: #4D97FE;
-  }
-
-  .xl\:text-ws-blue-500 {
-    color: #006AFE;
-  }
-
-  .xl\:text-ws-blue-600 {
-    color: #005FE5;
-  }
-
-  .xl\:text-ws-blue-700 {
-    color: #004098;
-  }
-
-  .xl\:text-ws-blue-800 {
-    color: #003072;
-  }
-
-  .xl\:text-ws-blue-900 {
-    color: #00204C;
-  }
-
-  .xl\:text-jet-black {
+  .xl\:text-mr-blue {
     color: #080F5B;
   }
 
-  .xl\:text-jet-black-09 {
+  .xl\:text-mr-blue-09 {
     color: rgba(13,25,163, .9);
-  }
-
-  .xl\:text-mr-blue {
-    color: #0D19A3;
-  }
-
-  .xl\:text-mr-light-blue {
-    color: #3CC7D4;
   }
 
   .xl\:text-mr-lime {
@@ -71018,56 +66926,12 @@ footer {
     color: #702459;
   }
 
-  .xl\:hover\:text-ws-blue-100:hover {
-    color: #E6F0FF;
-  }
-
-  .xl\:hover\:text-ws-blue-200:hover {
-    color: #BFDAFF;
-  }
-
-  .xl\:hover\:text-ws-blue-300:hover {
-    color: #99C3FF;
-  }
-
-  .xl\:hover\:text-ws-blue-400:hover {
-    color: #4D97FE;
-  }
-
-  .xl\:hover\:text-ws-blue-500:hover {
-    color: #006AFE;
-  }
-
-  .xl\:hover\:text-ws-blue-600:hover {
-    color: #005FE5;
-  }
-
-  .xl\:hover\:text-ws-blue-700:hover {
-    color: #004098;
-  }
-
-  .xl\:hover\:text-ws-blue-800:hover {
-    color: #003072;
-  }
-
-  .xl\:hover\:text-ws-blue-900:hover {
-    color: #00204C;
-  }
-
-  .xl\:hover\:text-jet-black:hover {
+  .xl\:hover\:text-mr-blue:hover {
     color: #080F5B;
   }
 
-  .xl\:hover\:text-jet-black-09:hover {
+  .xl\:hover\:text-mr-blue-09:hover {
     color: rgba(13,25,163, .9);
-  }
-
-  .xl\:hover\:text-mr-blue:hover {
-    color: #0D19A3;
-  }
-
-  .xl\:hover\:text-mr-light-blue:hover {
-    color: #3CC7D4;
   }
 
   .xl\:hover\:text-mr-lime:hover {
@@ -71462,56 +67326,12 @@ footer {
     color: #702459;
   }
 
-  .xl\:focus\:text-ws-blue-100:focus {
-    color: #E6F0FF;
-  }
-
-  .xl\:focus\:text-ws-blue-200:focus {
-    color: #BFDAFF;
-  }
-
-  .xl\:focus\:text-ws-blue-300:focus {
-    color: #99C3FF;
-  }
-
-  .xl\:focus\:text-ws-blue-400:focus {
-    color: #4D97FE;
-  }
-
-  .xl\:focus\:text-ws-blue-500:focus {
-    color: #006AFE;
-  }
-
-  .xl\:focus\:text-ws-blue-600:focus {
-    color: #005FE5;
-  }
-
-  .xl\:focus\:text-ws-blue-700:focus {
-    color: #004098;
-  }
-
-  .xl\:focus\:text-ws-blue-800:focus {
-    color: #003072;
-  }
-
-  .xl\:focus\:text-ws-blue-900:focus {
-    color: #00204C;
-  }
-
-  .xl\:focus\:text-jet-black:focus {
+  .xl\:focus\:text-mr-blue:focus {
     color: #080F5B;
   }
 
-  .xl\:focus\:text-jet-black-09:focus {
+  .xl\:focus\:text-mr-blue-09:focus {
     color: rgba(13,25,163, .9);
-  }
-
-  .xl\:focus\:text-mr-blue:focus {
-    color: #0D19A3;
-  }
-
-  .xl\:focus\:text-mr-light-blue:focus {
-    color: #3CC7D4;
   }
 
   .xl\:focus\:text-mr-lime:focus {

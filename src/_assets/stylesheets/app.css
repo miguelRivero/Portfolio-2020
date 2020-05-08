@@ -5,7 +5,7 @@
 
 body {
 	@apply font-body;
-	@apply bg-jet-black;
+	@apply bg-mr-blue;
 }
 
 html {
@@ -29,11 +29,11 @@ html {
 	z-index: 50;
 	user-select: none;
 	line-height: 23px;
-	text-shadow: 1px 1px 0 #191919, 
-	-1px -1px 0 #191919, 
-	1px -1px 0 #191919, 
-	-1px 1px 0 #191919, 
-	1px 1px 0 #191919
+	text-shadow: 1px 1px #0080F5B, 
+	-1px -1px #0080F5B, 
+	1px -1px #0080F5B, 
+	-1px 1px #0080F5B, 
+	1px 1px #0080F5B
 }
 
 #main-title {
@@ -127,11 +127,6 @@ html {
     top: 0;
 }
 
-
-a {
-	@apply text-ws-blue-500 underline;
-}
-
 .rocket {
 	animation: rocket 0.7s linear infinite both;
 }
@@ -173,14 +168,16 @@ footer {
 
 #about {
 	z-index: 103;
+	display: none
 }
 
 .about-wrapper {
 	top: 50%;
-	left: 10%;
-	transform: translateY(50%);
-	/* width: 805px; */
+	left: 0;
+    right: 0;
+    margin: auto;
 }
+
 @keyframes rocket {
 	0% {
 		transform: translate(0);
@@ -224,6 +221,9 @@ footer {
 	}
 	.nav-right{
 		right: 40px
+	}
+	.about-wrapper {
+		transform: translateY(50%);
 	}
 }
 

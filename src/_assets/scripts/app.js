@@ -163,7 +163,6 @@ ready(() => {
 	var process = () => {
 		width = canvas.width = innerWidth;
 		height = canvas.height = innerHeight;
-
 		numberElementCollector.moveAll();
 		draw();
 
@@ -171,6 +170,10 @@ ready(() => {
 	};
 	process();
 	// END BACKGROUND ANIMATION //
+
+	///////////////////////
+			//****//
+	///////////////////////
 
 	// SCROLL SNAP
 	//First the variables our app is going to use need to be declared
@@ -298,17 +301,17 @@ ready(() => {
 	 *   When user resize it's browser we need to know the new height, so we can properly align the current slide
 	 * */
 	function onResize() {
-		console.log('resize')
 		//This will give us the new height of the window
 		let newPageHeight = window.innerHeight;
 		let _index = $currentSlide.getAttribute('index')
-
+		
 		/*
-		 *   If the new height is different from the old height ( the browser is resized vertically ), the slides are resized
-		 * */
+		*   If the new height is different from the old height ( the browser is resized vertically ), the slides are resized
+		* */
 		if (pageHeight !== newPageHeight) {
 			pageHeight = newPageHeight;
-
+			
+			console.log(pageHeight)
 			//This can be done via CSS only, but fails into some old browsers, so I prefer to set height via JS
 			gsap.set([$slidesContainer, $slides], { height: pageHeight + "px" });
 
@@ -318,8 +321,11 @@ ready(() => {
 			});
 		}
 	}
-
 	// END SCROLL SNAP
+
+	///////////////////////
+			//****//
+	///////////////////////
 
 	//TOPNAME LINK
 	const _topName = document.getElementById("topname");
@@ -329,35 +335,31 @@ ready(() => {
 	});
 	//END TOPNAME LINK	
 
-	//TOPNAME LINK
+	///////////////////////
+			//****//
+	///////////////////////
+
+	//ABOUT SECTION
 	const aboutBtn = document.getElementById("nav-about-btn");
-	// let about_clicked = false; 
 	let aboutAnimation = gsap.timeline({ paused: true, reversed: true });
 	aboutAnimation.staggerFromTo(['#scroll-container', '#topname', '#arrowdown'], 0.25, {opacity: 1}, {opacity: 0, ease: ease_1}, 0.1)
-		.staggerFromTo("#about", 0.5, { xPercent: -100, x: 0 }, { xPercent: 0, x: 0, ease: ease_1});
+		.staggerFromTo("#about", 0.5, { xPercent: -100, x: 0 }, { xPercent: 0, x: 0, ease: ease_1, display: 'block'});
 
 	aboutBtn.addEventListener("click", aboutIn, false);
-	
-	// function toggleAbout() {
-	// 	if (about_clicked) {
-	// 		gsap.to('#about', 0.5, { left: '-100%'})
-	// 	} else {
-		// 		gsap.to('#about', 0.5, { left: '0'})
-		// 	}
-		// 	about_clicked = !about_clicked
-		// }
-		
-		function aboutIn() {
-			if (aboutAnimation.reversed()){
-				aboutAnimation.play()
-				aboutBtn.innerHTML = 'Hide';
-			} else {
-				aboutAnimation.reverse();
-				aboutBtn.innerHTML = 'About';
+
+	function aboutIn() {
+		let h = window.innerHeight/2;
+		gsap.set("#about-wrapper", {xPercent:-50, yPercent:-50, left:"50%", y:h})
+		if (aboutAnimation.reversed()){
+			aboutAnimation.play()
+			aboutBtn.innerHTML = 'Hide';
+		} else {
+			aboutAnimation.reverse();
+			aboutBtn.innerHTML = 'About';
 		}
 	}
 	
-	//END TOPNAME LINK	
+	//END ABOUT SECTION	
 });
 
 
