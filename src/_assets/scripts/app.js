@@ -385,7 +385,7 @@ ready(() => {
 
 	function aboutIn() {
 		let h = window.innerHeight/2;
-		gsap.set("#about-wrapper", {xPercent:-50, yPercent:-50, left:"50%", y:h})
+		// gsap.set("#about-wrapper", {xPercent:-50, yPercent:-50, left:"50%", y:h})
 		if (aboutAnimation.reversed()){
 			aboutAnimation.play()
 			aboutBtn.innerHTML = 'Hide';
