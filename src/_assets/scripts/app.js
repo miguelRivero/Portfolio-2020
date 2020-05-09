@@ -261,18 +261,19 @@ ready(() => {
 		return  Math.min(Math.max(d / 2, -1), 1);
 	}
 
+	
 	function onMouseWheel(event) {
+		// event.preventDefault();
 		//Normalize event wheel delta
-		console.log(normalize_mousewheel(event))
-		let delta = event.wheelDelta / 30 || -event.detail;
-
+		let delta = event.deltaY / 30 || -event.detail;
+		console.log(delta)
+		
 		//If the user scrolled up, it goes to previous slide, otherwise - to next slide
-		if (delta < -1) {
-			goToNextSlide();
-		} else if (delta > 1) {
+		if (delta <= -1) {
 			goToPrevSlide();
+		} else if (delta >= 1) {
+			goToNextSlide();
 		}
-		//event.preventDefault();
 	}
 	
 	/*
